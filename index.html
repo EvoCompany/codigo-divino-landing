@@ -1313,13 +1313,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     // Exit-intent no mobile: o gesto de arrastar da borda esquerda (swipe-back
     // do iOS Safari / "voltar preditivo" do Android) nem sempre dispara o
     // popstate a tempo, pois o navegador já inicia a navegação antes do JS
-    // conseguir reagir. Detectamos o toque perto da borda como aviso antecipado.
+    // conseguir reagir. Só disparamos quando há um ARRASTO horizontal real a
+    // partir da borda — nunca em um toque parado (tap), mesmo que caia perto
+    // da borda (ex: botões largos cujo início encosta na margem da tela).
+    let toqueInicioX = null;
+    let toqueInicioY = null;
+
     document.addEventListener('touchstart', function (e) {
-      if (jaMostrou()) return;
       const toque = e.touches && e.touches[0];
-      if (toque && toque.clientX <= 24) {
-        mostrarOfertaSalida();
+      if (toque && toque.clientX <= 20) {
+        toqueInicioX = toque.clientX;
+        toqueInicioY = toque.clientY;
+      } else {
+        toqueInicioX = null;
       }
+    }, { passive: true });
+
+    document.addEventListener('touchmove', function (e) {
+      if (toqueInicioX === null || jaMostrou()) return;
+      const toque = e.touches && e.touches[0];
+      if (!toque) return;
+      const deltaX = toque.clientX - toqueInicioX;
+      const deltaY = Math.abs(toque.clientY - toqueInicioY);
+      // Arrasto horizontal claro (>40px) e predominante sobre o vertical = swipe-back real
+      if (deltaX > 40 && deltaY < 60) {
+        mostrarOfertaSalida();
+        toqueInicioX = null;
+      }
+    }, { passive: true });
+
+    document.addEventListener('touchend', function () {
+      toqueInicioX = null;
     }, { passive: true });
 
     // Reforço: se o usuário chegar a sair e voltar via cache do navegador
