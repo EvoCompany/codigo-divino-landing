@@ -117,7 +117,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     overflow: hidden;
   }
   .hero__container { max-width: 640px; margin: 0 auto; position: relative; z-index: 2; }
-  .hero__ilustracion { width: 150px; margin: 0 auto 24px; }
+  .hero__mockup {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    margin: 0 auto 20px;
+    filter: drop-shadow(0 14px 30px rgba(0,0,0,0.45));
+  }
   .hero__badge {
     display: inline-block;
     background: rgba(201,162,39,0.15);
@@ -671,6 +677,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .depoimentos__grid { flex-direction: row; }
     .depoimento__card { flex: 1; }
     .notif-compra { left: 24px; max-width: 280px; }
+    .hero__mockup { max-width: 460px; }
   }
 
   /* ============================================
@@ -712,23 +719,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ====== HERO ====== -->
 <section class="hero">
   <div class="hero__container">
-    <svg class="hero__ilustracion" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <linearGradient id="rayo" x1="100" y1="0" x2="100" y2="160" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#C9A227" stop-opacity="0.35"/>
-          <stop offset="1" stop-color="#C9A227" stop-opacity="0"/>
-        </linearGradient>
-      </defs>
-      <path d="M100 0 L60 160 L140 160 Z" fill="url(#rayo)"/>
-      <path d="M20 40 Q100 20 180 40 L180 130 Q100 110 20 130 Z" fill="none" stroke="#C9A227" stroke-width="2.5"/>
-      <line x1="100" y1="30" x2="100" y2="122" stroke="#C9A227" stroke-width="2.5"/>
-      <path d="M28 52 Q64 40 96 50" stroke="#E8D9A8" stroke-width="1.4" fill="none" opacity="0.7"/>
-      <path d="M28 68 Q64 56 96 66" stroke="#E8D9A8" stroke-width="1.4" fill="none" opacity="0.7"/>
-      <path d="M28 84 Q64 72 96 82" stroke="#E8D9A8" stroke-width="1.4" fill="none" opacity="0.7"/>
-      <path d="M104 50 Q136 40 172 52" stroke="#E8D9A8" stroke-width="1.4" fill="none" opacity="0.7"/>
-      <path d="M104 66 Q136 56 172 68" stroke="#E8D9A8" stroke-width="1.4" fill="none" opacity="0.7"/>
-      <path d="M104 82 Q136 72 172 84" stroke="#E8D9A8" stroke-width="1.4" fill="none" opacity="0.7"/>
-    </svg>
+    <img class="hero__mockup" src="img/mockup-hero.webp" alt="Código Divino — mockup con todos los módulos y los 5 bonos incluidos" width="1100" height="880" fetchpriority="high">
 
     <span class="hero__badge">✝️ Estudio Bíblico Visual</span>
     <h1 class="hero__headline">
