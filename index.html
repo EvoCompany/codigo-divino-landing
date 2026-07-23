@@ -345,9 +345,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .bonos__item h3 { font-size: 15.5px; color: var(--cor-secundaria); margin-bottom: 3px; }
   .bonos__item p { font-size: 13.5px; color: #6B5F49; }
-  .bonos__conteudo { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
-  .bonos__thumb { width: 42px; height: auto; flex-shrink: 0; object-fit: contain; }
   .bonos__valor { margin-left: auto; text-align: right; flex-shrink: 0; }
+  .bonos__item--destaque {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 22px 18px 18px;
+    gap: 4px;
+  }
+  .bonos__destaque-img { position: relative; margin-bottom: 10px; }
+  .bonos__thumb {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+  }
+  .bonos__item--destaque .bonos__numero {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 30px; height: 30px;
+    background: var(--cor-primaria);
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+  }
+  .bonos__item--destaque .bonos__valor { margin: 6px 0 0; text-align: center; }
+  @media (min-width: 480px) {
+    .bonos__thumb { width: 170px; }
+  }
+  @media (min-width: 768px) {
+    .bonos__item--destaque { flex-direction: row; text-align: left; padding: 18px 22px; gap: 20px; }
+    .bonos__destaque-img { margin-bottom: 0; }
+    .bonos__thumb { width: 140px; }
+    .bonos__item--destaque .bonos__conteudo-texto { flex: 1; }
+    .bonos__item--destaque .bonos__valor { margin: 0 0 0 auto; text-align: right; }
+  }
   .bonos__valor s { font-size: 12px; color: #999; }
   .bonos__valor strong { display: block; font-size: 13px; color: #2E7D32; font-weight: 800; }
   .bonos__total {
@@ -849,13 +883,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="secao__titulo">Además, el Plan Completo incluye 5 bonos exclusivos</h2>
     <p class="bonos__intro">Por tiempo limitado, el Plan Completo incluye estos 5 recursos adicionales — totalmente gratis.</p>
     <ul class="bonos__lista">
-      <li class="bonos__item">
-        <span class="bonos__numero">01</span>
-        <div class="bonos__conteudo">
-          <img class="bonos__thumb" src="img/bonus-01-mandamientos.webp" alt="Mockup del bono Los 10 Mandamientos Explicados" width="42" height="63" loading="lazy">
-          <div><h3>Los 10 Mandamientos Explicados</h3><p>Guía visual de cada mandamiento y su aplicación práctica hoy.</p></div>
+      <li class="bonos__item bonos__item--destaque">
+        <div class="bonos__destaque-img">
+          <img class="bonos__thumb" src="img/bonus-01-mandamientos.webp" alt="Mockup del bono Los 10 Mandamientos Explicados" width="170" height="255" loading="lazy">
+          <span class="bonos__numero">01</span>
         </div>
-        <div class="bonos__valor"><s>$17</s><strong>GRATIS</strong></div>
+        <div class="bonos__conteudo-texto">
+          <h3>Los 10 Mandamientos Explicados</h3>
+          <p>Guía visual de cada mandamiento y su aplicación práctica hoy.</p>
+          <div class="bonos__valor"><s>$17</s><strong>GRATIS</strong></div>
+        </div>
       </li>
       <li class="bonos__item">
         <span class="bonos__numero">02</span>
