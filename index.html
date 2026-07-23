@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Código Divino — Entiende la Biblia de Principio a Fin | Estudio Bíblico Visual</title>
+
+<!-- SEO & Open Graph (preview en WhatsApp / Facebook) -->
+<meta name="description" content="El sistema visual de 3 pasos que le da claridad bíblica a miles de cristianos. Entiende la Biblia de principio a fin en solo 15 minutos al día.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://codigodivinoano.com/">
+<meta property="og:title" content="Código Divino — Entiende la Biblia de Principio a Fin">
+<meta property="og:description" content="El sistema visual de 3 pasos que le da claridad bíblica a miles de cristianos en toda Latinoamérica.">
+<!-- TODO: trocar por uma imagem real 1200x630px (mockup do produto) -->
+<meta property="og:image" content="https://codigodivinoano.com/og-image.jpg">
+<meta property="og:url" content="https://codigodivinoano.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_LA">
+
+<!-- Favicon (emoji inline, sem dependência externa) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%96%3C/text%3E%3C/svg%3E">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ============================================
+     META PIXEL — troque SEU_PIXEL_ID pelo ID real
+============================================ -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'SEU_PIXEL_ID');
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/>
+</noscript>
+
+<!-- ============================================
+     GOOGLE TAG MANAGER — troque GTM-XXXXXXX pelo ID real
+============================================ -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+<style>
+  /* ============================================
+     VARIÁVEIS — edite aqui para customizar cores
+  ============================================ */
+  :root {
+    --cor-primaria: #C9A227;        /* dourado — CTA e destaques */
+    --cor-primaria-escura: #9C7C1A;
+    --cor-secundaria: #14102B;      /* azul-violeta profundo — hero, autoridade, oferta */
+    --cor-secundaria-2: #1F1A3D;
+    --cor-texto: #FFFFFF;
+    --cor-texto-claro: #E8E1CE;
+    --cor-fundo: #FBF6EA;           /* pergaminho/creme — fundo geral */
+    --cor-fundo-alt: #F3EAD4;
+    --cor-corpo: #2B2118;           /* marrom escuro — texto sobre fundo claro */
+    --cor-borda: #E3D6B4;
+    --sombra-card: 0 4px 18px rgba(43, 33, 24, 0.08);
+    --fonte-titulo: 'Playfair Display', serif;
+    --fonte-corpo: 'Inter', sans-serif;
+  }
+
+  /* ============================================
+     RESET & BASE
+  ============================================ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--fonte-corpo);
+    background: var(--cor-fundo);
+    color: var(--cor-corpo);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, svg { max-width: 100%; height: auto; display: block; }
+  a { text-decoration: none; color: inherit; }
+  ul { list-style: none; }
+  .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 56px 20px; }
+  h1, h2, h3 { font-family: var(--fonte-titulo); }
+
+  /* ============================================
+     BARRA DE URGÊNCIA (topo, fixa)
+  ============================================ */
+  .barra-urgencia {
+    background: var(--cor-secundaria);
+    color: var(--cor-texto);
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  .barra-urgencia strong { color: var(--cor-primaria); }
+  #contador-topo { font-variant-numeric: tabular-nums; font-weight: 800; color: var(--cor-primaria); }
+
+  /* ============================================
+     HERO
+  ============================================ */
+  .hero {
+    background: radial-gradient(ellipse at top, var(--cor-secundaria-2) 0%, var(--cor-secundaria) 60%);
+    color: var(--cor-texto);
+    padding: 48px 20px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero__container { max-width: 640px; margin: 0 auto; position: relative; z-index: 2; }
+  .hero__ilustracion { width: 150px; margin: 0 auto 24px; }
+  .hero__badge {
+    display: inline-block;
+    background: rgba(201,162,39,0.15);
+    border: 1px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 7px 16px;
+    border-radius: 30px;
+    margin-bottom: 22px;
+  }
+  .hero__headline {
+    font-size: clamp(28px, 6vw, 46px);
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 18px;
+  }
+  .hero__headline span { color: var(--cor-primaria); }
+  .hero__subheadline {
+    font-size: clamp(16px, 2.5vw, 19px);
+    color: var(--cor-texto-claro);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero__estrelas { font-size: 15px; color: var(--cor-primaria); margin-top: 16px; }
+  .hero__estrelas span { color: var(--cor-texto-claro); }
+  .hero__preco-teaser { margin-top: 14px; font-size: 14px; color: var(--cor-texto-claro); }
+  .hero__preco-teaser strong { color: var(--cor-primaria); font-size: 20px; }
+
+  /* ============================================
+     BOTÃO CTA
+  ============================================ */
+  .btn-cta {
+    display: inline-block;
+    width: 100%;
+    max-width: 440px;
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-escura));
+    color: #1A1409;
+    font-size: clamp(15px, 2.2vw, 18px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 18px 22px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(201,162,39,0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  }
+  .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(201,162,39,0.45); }
+  .btn-cta:active { transform: translateY(0); }
+  .form-microcopy {
+    font-size: 12.5px;
+    color: var(--cor-texto-claro);
+    margin-top: 14px;
+    opacity: 0.85;
+  }
+  .form-microcopy.claro { color: #7A6E58; }
+
+  /* ============================================
+     PROVA SOCIAL / NÚMEROS
+  ============================================ */
+  .prova-social {
+    background: var(--cor-fundo-alt);
+    padding: 32px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--cor-borda);
+  }
+  .prova-social__numeros {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    flex-wrap: wrap;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .numero__valor { font-size: clamp(24px, 4vw, 32px); font-weight: 800; color: var(--cor-primaria-escura); font-family: var(--fonte-titulo); }
+  .numero__label { font-size: 13px; color: #6B5F49; margin-top: 2px; }
+
+  /* ============================================
+     SEÇÕES GERAIS
+  ============================================ */
+  .secao__titulo {
+    font-size: clamp(24px, 4.5vw, 34px);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 14px;
+    color: var(--cor-secundaria);
+  }
+  .secao__subtitulo {
+    text-align: center;
+    font-size: clamp(15px, 2.2vw, 17px);
+    color: #6B5F49;
+    max-width: 560px;
+    margin: 0 auto 40px;
+  }
+
+  /* ============================================
+     PROBLEMA / AGITAÇÃO
+  ============================================ */
+  .problema { background: var(--cor-fundo); }
+  .problema__lista { max-width: 620px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+  .problema__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #fff;
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 16px 18px;
+    font-size: 15.5px;
+  }
+  .problema__icone { color: #C0392B; font-weight: 800; flex-shrink: 0; }
+  .problema__conclusao {
+    text-align: center;
+    max-width: 560px;
+    margin: 30px auto 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-titulo);
+  }
+
+  /* ============================================
+     MÉTODO / SOLUÇÃO
+  ============================================ */
+  .metodo { background: var(--cor-secundaria); color: var(--cor-texto); }
+  .metodo .secao__titulo { color: var(--cor-texto); }
+  .metodo .secao__subtitulo { color: var(--cor-texto-claro); }
+  .metodo__grid { display: flex; flex-direction: column; gap: 18px; max-width: 640px; margin: 0 auto; }
+  .metodo__card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(201,162,39,0.3);
+    border-radius: 14px;
+    padding: 24px;
+  }
+  .metodo__letra {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--cor-primaria);
+    color: #1A1409;
+    font-weight: 800;
+    border-radius: 50%;
+    font-family: var(--fonte-titulo);
+    margin-bottom: 12px;
+  }
+  .metodo__card h3 { font-size: 19px; margin-bottom: 8px; color: var(--cor-primaria); }
+  .metodo__card p { font-size: 15px; color: var(--cor-texto-claro); }
+
+  /* ============================================
+     O QUE INCLUI
+  ============================================ */
+  .incluye__lista { display: flex; flex-direction: column; gap: 16px; max-width: 640px; margin: 0 auto; }
+  .incluye__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--sombra-card);
+  }
+  .incluye__icone { font-size: 28px; flex-shrink: 0; }
+  .incluye__item h3 { font-size: 16.5px; margin-bottom: 4px; color: var(--cor-secundaria); font-family: var(--fonte-corpo); font-weight: 700; }
+  .incluye__item p { font-size: 14.5px; color: #5C5040; }
+
+  /* ============================================
+     PARA QUEM
+  ============================================ */
+  .paraquem { background: var(--cor-fundo-alt); }
+  .paraquem__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .paraquem__card {
+    background: #fff;
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    padding: 18px 14px;
+    text-align: center;
+  }
+  .paraquem__icone { font-size: 26px; margin-bottom: 8px; }
+  .paraquem__card p { font-size: 14px; font-weight: 600; color: var(--cor-corpo); }
+
+  /* ============================================
+     BÔNUS
+  ============================================ */
+  .bonos__intro { text-align: center; max-width: 560px; margin: 0 auto 32px; font-size: 16px; }
+  .bonos__lista { display: flex; flex-direction: column; gap: 14px; max-width: 640px; margin: 0 auto; }
+  .bonos__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border: 2px dashed var(--cor-primaria);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .bonos__numero {
+    font-family: var(--fonte-titulo);
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--cor-primaria-escura);
+    flex-shrink: 0;
+    width: 34px;
+  }
+  .bonos__item h3 { font-size: 15.5px; color: var(--cor-secundaria); margin-bottom: 3px; }
+  .bonos__item p { font-size: 13.5px; color: #6B5F49; }
+  .bonos__valor { margin-left: auto; text-align: right; flex-shrink: 0; }
+  .bonos__valor s { font-size: 12px; color: #999; }
+  .bonos__valor strong { display: block; font-size: 13px; color: #2E7D32; font-weight: 800; }
+  .bonos__total {
+    max-width: 640px;
+    margin: 24px auto 0;
+    text-align: center;
+    background: var(--cor-secundaria);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 16px;
+  }
+  .bonos__total strong { color: var(--cor-primaria); font-size: 22px; }
+
+  /* ============================================
+     DEPOIMENTOS
+  ============================================ */
+  .depoimentos__grid { display: flex; flex-direction: column; gap: 16px; max-width: 640px; margin: 0 auto; }
+  .depoimento__card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--sombra-card);
+  }
+  .depoimento__estrelas { color: var(--cor-primaria); font-size: 14px; margin-bottom: 8px; }
+  .depoimento__texto { font-size: 15px; font-style: italic; color: #4A3F30; margin-bottom: 12px; }
+  .depoimento__autor { display: flex; align-items: center; gap: 10px; }
+  .depoimento__avatar {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--cor-fundo-alt);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; color: var(--cor-primaria-escura);
+    flex-shrink: 0;
+  }
+  .depoimento__nome { font-size: 13.5px; font-weight: 700; color: var(--cor-secundaria); }
+  .depoimento__local { font-size: 12px; color: #999; }
+  .depoimentos__aviso {
+    max-width: 640px; margin: 20px auto 0; text-align: center;
+    font-size: 12px; color: #A99; background: #FFF7F0; border: 1px dashed #E0B090;
+    border-radius: 8px; padding: 10px 14px;
+  }
+
+  /* ============================================
+     AUTORIDADE
+  ============================================ */
+  .autoridade { background: var(--cor-secundaria); color: #fff; }
+  .autoridade__inner { max-width: 620px; margin: 0 auto; text-align: center; }
+  .autoridade__selo {
+    width: 84px; height: 84px; border-radius: 50%;
+    background: rgba(201,162,39,0.15);
+    border: 2px solid var(--cor-primaria);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 34px;
+    margin: 0 auto 18px;
+  }
+  .autoridade__nome { font-size: 21px; font-weight: 700; margin-bottom: 10px; color: var(--cor-primaria); }
+  .autoridade__bio { font-size: 15px; color: var(--cor-texto-claro); line-height: 1.7; }
+
+  /* ============================================
+     OFERTA / PREÇO
+  ============================================ */
+  .oferta { background: linear-gradient(180deg, var(--cor-fundo-alt), var(--cor-fundo)); }
+  .oferta__card {
+    max-width: 520px;
+    margin: 0 auto;
+    background: #fff;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 18px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(43,33,24,0.12);
+  }
+  .oferta__valor-total { font-size: 15px; color: #8A7A5C; margin-bottom: 6px; }
+  .oferta__valor-total s { color: #B0A080; }
+  .oferta__preco-hoje { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--cor-primaria-escura); font-weight: 700; margin-bottom: 6px; }
+  .oferta__preco { font-family: var(--fonte-titulo); font-size: clamp(42px, 9vw, 58px); font-weight: 800; color: var(--cor-secundaria); line-height: 1; }
+  .oferta__preco small { font-size: 18px; font-weight: 600; }
+  .oferta__parcelas { font-size: 13.5px; color: #8A7A5C; margin: 8px 0 22px; }
+  .oferta__contador {
+    display: flex; justify-content: center; gap: 6px;
+    font-variant-numeric: tabular-nums;
+    font-family: var(--fonte-titulo);
+    font-size: clamp(22px, 5vw, 30px);
+    font-weight: 800;
+    color: #B23A2E;
+    background: #FDF0EE;
+    border: 1px solid #F0C9C3;
+    border-radius: 10px;
+    padding: 10px 16px;
+    margin-bottom: 22px;
+  }
+  .oferta__contador-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #B23A2E; font-weight: 700; margin-bottom: 6px; }
+  .oferta__pagamentos { display: flex; justify-content: center; gap: 10px; margin-top: 18px; font-size: 12px; color: #8A7A5C; flex-wrap: wrap; }
+  .oferta__pagamentos span { background: var(--cor-fundo-alt); padding: 5px 10px; border-radius: 6px; }
+  .oferta__garantia-mini {
+    margin-top: 20px; font-size: 13px; color: #6B5F49;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+
+  /* ============================================
+     GARANTIA
+  ============================================ */
+  .garantia { text-align: center; }
+  .garantia__selo {
+    width: 96px; height: 96px; margin: 0 auto 20px;
+    border-radius: 50%;
+    background: var(--cor-fundo-alt);
+    border: 3px solid var(--cor-primaria);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 42px;
+  }
+  .garantia__texto { max-width: 520px; margin: 0 auto; font-size: 16px; color: #4A3F30; }
+  .garantia__texto strong { color: var(--cor-secundaria); }
+
+  /* ============================================
+     FAQ
+  ============================================ */
+  .faq__lista { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+  .faq__item { background: #fff; border: 1px solid var(--cor-borda); border-radius: 10px; overflow: hidden; }
+  .faq__pergunta {
+    width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+    padding: 16px 18px; font-size: 15px; font-weight: 700; color: var(--cor-secundaria);
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    font-family: var(--fonte-corpo);
+  }
+  .faq__pergunta .icone { transition: transform 0.2s ease; color: var(--cor-primaria-escura); font-size: 18px; flex-shrink: 0; }
+  .faq__item.aberto .faq__pergunta .icone { transform: rotate(45deg); }
+  .faq__resposta {
+    max-height: 0; overflow: hidden; transition: max-height 0.25s ease;
+    font-size: 14.5px; color: #5C5040; padding: 0 18px;
+  }
+  .faq__item.aberto .faq__resposta { padding: 0 18px 18px; }
+
+  /* ============================================
+     CTA FINAL
+  ============================================ */
+  .cta-final { background: var(--cor-secundaria); color: #fff; text-align: center; }
+  .cta-final__titulo { font-size: clamp(24px, 4.5vw, 34px); font-weight: 700; margin-bottom: 16px; }
+  .cta-final__sub { color: var(--cor-texto-claro); margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+  /* ============================================
+     RODAPÉ
+  ============================================ */
+  footer {
+    background: #0C0A1A;
+    color: #877;
+    font-size: 12px;
+    text-align: center;
+    padding: 28px 20px 100px;
+  }
+  footer p { margin-bottom: 6px; color: #8A8398; }
+  footer a { color: #B0A8C0; }
+  footer a:hover { color: #fff; }
+  footer .disclaimer { max-width: 480px; margin: 14px auto 0; font-size: 11px; color: #665F73; }
+
+  /* ============================================
+     BARRA CTA FIXA (mobile)
+  ============================================ */
+  .barra-fixa {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: #fff;
+    border-top: 1px solid var(--cor-borda);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+    transform: translateY(120%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+  .barra-fixa.visivel { transform: translateY(0); }
+  .barra-fixa__preco { font-family: var(--fonte-titulo); font-weight: 800; color: var(--cor-secundaria); font-size: 18px; white-space: nowrap; }
+  .barra-fixa__preco small { display: block; font-size: 10px; font-weight: 500; color: #999; }
+  .barra-fixa .btn-cta { padding: 12px 18px; font-size: 13px; width: auto; }
+
+  /* ============================================
+     DESKTOP
+  ============================================ */
+  @media (min-width: 768px) {
+    section { padding: 80px 20px; }
+    .paraquem__grid { grid-template-columns: repeat(3, 1fr); }
+    .incluye__lista { max-width: 720px; }
+    .autoridade__inner { display: flex; align-items: center; gap: 32px; text-align: left; }
+    .autoridade__selo { margin: 0; flex-shrink: 0; }
+    .barra-fixa { max-width: 480px; left: 50%; transform: translate(-50%, 120%); border-radius: 14px 14px 0 0; }
+    .barra-fixa.visivel { transform: translate(-50%, 0); }
+  }
+</style>
+</head>
+<body>
+
+<!-- GTM noscript -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ====== BARRA DE URGÊNCIA ====== -->
+<div class="barra-urgencia">
+  🔥 Oferta de lanzamiento termina en <strong><span id="contador-topo">--:--:--</span></strong>
+</div>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero__container">
+    <svg class="hero__ilustracion" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="rayo" x1="100" y1="0" x2="100" y2="160" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#C9A227" stop-opacity="0.35"/>
+          <stop offset="1" stop-color="#C9A227" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path d="M100 0 L60 160 L140 160 Z" fill="url(#rayo)"/>
+      <path d="M20 40 Q100 20 180 40 L180 130 Q100 110 20 130 Z" fill="none" stroke="#C9A227" stroke-width="2.5"/>
+      <line x1="100" y1="30" x2="100" y2="122" stroke="#C9A227" stroke-width="2.5"/>
+      <path d="M28 52 Q64 40 96 50" stroke="#E8D9A8" stroke-width="1.4" fill="none" opacity="0.7"/>
+      <path d="M28 68 Q64 56 96 66" stroke="#E8D9A8" stroke-width="1.4" fill="none" opacity="0.7"/>
+      <path d="M28 84 Q64 72 96 82" stroke="#E8D9A8" stroke-width="1.4" fill="none" opacity="0.7"/>
+      <path d="M104 50 Q136 40 172 52" stroke="#E8D9A8" stroke-width="1.4" fill="none" opacity="0.7"/>
+      <path d="M104 66 Q136 56 172 68" stroke="#E8D9A8" stroke-width="1.4" fill="none" opacity="0.7"/>
+      <path d="M104 82 Q136 72 172 84" stroke="#E8D9A8" stroke-width="1.4" fill="none" opacity="0.7"/>
+    </svg>
+
+    <span class="hero__badge">✝️ Estudio Bíblico Visual</span>
+    <h1 class="hero__headline">
+      Entiende la Biblia de Principio a Fin en Solo <span>15 Minutos al Día</span>
+    </h1>
+    <p class="hero__subheadline">
+      El sistema visual y guiado que le está devolviendo la claridad bíblica a miles de cristianos en toda Latinoamérica. Sin seminario. Sin años de estudio. Sin frustración.
+    </p>
+
+    <a href="#oferta" class="btn-cta">✅ QUIERO ENTENDER LA BIBLIA HOY</a>
+    <p class="form-microcopy">🔒 Acceso inmediato · Pago 100% seguro · Garantía de 7 días</p>
+
+    <p class="hero__estrelas">★★★★★ <span>4.9/5 — más de 4.000 cristianos ya lo están usando</span></p>
+    <p class="hero__preco-teaser">Precio de lanzamiento desde <strong>$14,90</strong></p>
+  </div>
+</section>
+
+<!-- ====== PROVA SOCIAL ====== -->
+<section class="prova-social">
+  <div class="prova-social__numeros">
+    <div>
+      <div class="numero__valor">+4.000</div>
+      <div class="numero__label">cristianos ya lo usan</div>
+    </div>
+    <div>
+      <div class="numero__valor">4.9★</div>
+      <div class="numero__label">calificación promedio</div>
+    </div>
+    <div>
+      <div class="numero__valor">7 días</div>
+      <div class="numero__label">de garantía total</div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PROBLEMA / AGITAÇÃO ====== -->
+<section class="problema">
+  <div class="container">
+    <h2 class="secao__titulo">¿Te suena familiar?</h2>
+    <p class="secao__subtitulo">No estás solo. Esto le pasa a la mayoría de los cristianos que intentan estudiar la Biblia por su cuenta.</p>
+    <ul class="problema__lista">
+      <li class="problema__item"><span class="problema__icone">✕</span> Abres la Biblia con buenas intenciones... y la cierras 10 minutos después sin entender nada.</li>
+      <li class="problema__item"><span class="problema__icone">✕</span> Lees el mismo capítulo dos o tres veces y sigues sin saber qué te quiere decir Dios.</li>
+      <li class="problema__item"><span class="problema__icone">✕</span> Sientes que todos a tu alrededor "entienden" la Palabra menos tú.</li>
+      <li class="problema__item"><span class="problema__icone">✕</span> Empezaste un plan de lectura hace meses... y ya no recuerdas ni en qué libro ibas.</li>
+      <li class="problema__item"><span class="problema__icone">✕</span> Te da vergüenza preguntar en tu grupo de estudio porque sientes que deberías saber más.</li>
+    </ul>
+    <p class="problema__conclusao">No es falta de fe. Es falta de un método visual que te guíe paso a paso.</p>
+  </div>
+</section>
+
+<!-- ====== MÉTODO / SOLUÇÃO ====== -->
+<section class="metodo">
+  <div class="container">
+    <h2 class="secao__titulo">Presentamos el Método V.E.R.</h2>
+    <p class="secao__subtitulo">Un sistema de 3 pasos que transforma capítulos densos de la Biblia en mapas claros que tu mente puede retener — así estudian quienes usan Código Divino.</p>
+    <div class="metodo__grid">
+      <div class="metodo__card">
+        <span class="metodo__letra">V</span>
+        <h3>VER</h3>
+        <p>Visualiza cada libro con mapas, líneas de tiempo e ilustraciones que muestran de un vistazo qué está pasando y por qué importa.</p>
+      </div>
+      <div class="metodo__card">
+        <span class="metodo__letra">E</span>
+        <h3>ENTENDER</h3>
+        <p>Explicaciones verso a verso en lenguaje simple, sin tecnicismos teológicos que te hagan sentir perdido.</p>
+      </div>
+      <div class="metodo__card">
+        <span class="metodo__letra">R</span>
+        <h3>RETENER</h3>
+        <p>Guías devocionales y preguntas de aplicación que fijan lo aprendido en tu vida diaria, no solo en tu memoria.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== O QUE INCLUI ====== -->
+<section class="incluye" id="incluye">
+  <div class="container">
+    <h2 class="secao__titulo">Lo que vas a recibir hoy</h2>
+    <p class="secao__subtitulo">Contenido creado para que empieces a estudiar hoy mismo, sin importar tu nivel actual.</p>
+    <ul class="incluye__lista">
+      <li class="incluye__item">
+        <span class="incluye__icone">📖</span>
+        <div><h3>Génesis Verso a Verso</h3><p>Comprende el origen de todo — desde la creación hasta José — sin perderte en nombres y genealogías.</p></div>
+      </li>
+      <li class="incluye__item">
+        <span class="incluye__icone">🌊</span>
+        <div><h3>Éxodo Explicado</h3><p>Entiende el llamado de Moisés y la salida de Egipto como una historia que también habla de tu propia liberación.</p></div>
+      </li>
+      <li class="incluye__item">
+        <span class="incluye__icone">⛪</span>
+        <div><h3>Levítico Sin Complicaciones</h3><p>La guía espiritual que simplifica el libro que más cristianos abandonan a mitad de camino.</p></div>
+      </li>
+      <li class="incluye__item">
+        <span class="incluye__icone">🗺️</span>
+        <div><h3>Josué en Resúmenes Temáticos</h3><p>Mapas y resúmenes visuales de la conquista de la Tierra Prometida, fáciles de repasar.</p></div>
+      </li>
+      <li class="incluye__item">
+        <span class="incluye__icone">🙏</span>
+        <div><h3>Devocional Guiado de 30 Días</h3><p>Un hábito diario de estudio que se adapta a los 15 minutos que ya tienes disponibles.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ====== PARA QUEM ====== -->
+<section class="paraquem">
+  <div class="container">
+    <h2 class="secao__titulo">¿Para quién es Código Divino?</h2>
+    <div class="paraquem__grid">
+      <div class="paraquem__card"><div class="paraquem__icone">🎓</div><p>Pastores y líderes que buscan material visual para enseñar</p></div>
+      <div class="paraquem__card"><div class="paraquem__icone">🌱</div><p>Nuevos creyentes que quieren empezar con el pie derecho</p></div>
+      <div class="paraquem__card"><div class="paraquem__icone">👨‍👩‍👧‍👦</div><p>Familias que desean estudiar la Palabra juntas</p></div>
+      <div class="paraquem__card"><div class="paraquem__icone">🔥</div><p>Líderes de célula que necesitan contenido listo para compartir</p></div>
+      <div class="paraquem__card"><div class="paraquem__icone">📚</div><p>Cristianos cansados de leer sin entender</p></div>
+      <div class="paraquem__card"><div class="paraquem__icone">⏱️</div><p>Quienes tienen poco tiempo pero quieren avanzar de verdad</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== BÔNUS ====== -->
+<section class="bonos" id="bonos">
+  <div class="container">
+    <h2 class="secao__titulo">Además, hoy recibes 5 bonos exclusivos</h2>
+    <p class="bonos__intro">Por tiempo limitado, cada compra incluye estos 5 recursos adicionales — totalmente gratis.</p>
+    <ul class="bonos__lista">
+      <li class="bonos__item">
+        <span class="bonos__numero">01</span>
+        <div><h3>Los 10 Mandamientos Explicados</h3><p>Guía visual de cada mandamiento y su aplicación práctica hoy.</p></div>
+        <div class="bonos__valor"><s>$17</s><strong>GRATIS</strong></div>
+      </li>
+      <li class="bonos__item">
+        <span class="bonos__numero">02</span>
+        <div><h3>Milagros de Jesús Visualizados</h3><p>Los milagros más importantes explicados de forma clara y visual.</p></div>
+        <div class="bonos__valor"><s>$15</s><strong>GRATIS</strong></div>
+      </li>
+      <li class="bonos__item">
+        <span class="bonos__numero">03</span>
+        <div><h3>Historias Bíblicas para la Familia</h3><p>Material ilustrado para compartir la Palabra con los más pequeños.</p></div>
+        <div class="bonos__valor"><s>$12</s><strong>GRATIS</strong></div>
+      </li>
+      <li class="bonos__item">
+        <span class="bonos__numero">04</span>
+        <div><h3>Devocionales de Poder — 30 Días</h3><p>Un devocional diario adicional para fortalecer tu caminar espiritual.</p></div>
+        <div class="bonos__valor"><s>$19</s><strong>GRATIS</strong></div>
+      </li>
+      <li class="bonos__item">
+        <span class="bonos__numero">05</span>
+        <div><h3>Manual de Interpretación Bíblica</h3><p>Principios simples para interpretar cualquier pasaje por tu cuenta.</p></div>
+        <div class="bonos__valor"><s>$14</s><strong>GRATIS</strong></div>
+      </li>
+    </ul>
+    <div class="bonos__total">Valor total de los bonos: <strong>$77</strong> — incluidos hoy sin costo</div>
+  </div>
+</section>
+
+<!-- ====== DEPOIMENTOS ======
+     ATENÇÃO: substitua os cards abaixo por depoimentos REAIS de clientes
+     antes de publicar (nome, cidade, foto/print e frase autêntica).
+     Nunca publique depoimentos fabricados apresentados como reais. -->
+<section class="depoimentos">
+  <div class="container">
+    <h2 class="secao__titulo">Lo que dicen quienes ya lo están usando</h2>
+    <div class="depoimentos__grid">
+      <div class="depoimento__card">
+        <div class="depoimento__estrelas">★★★★★</div>
+        <p class="depoimento__texto">"[Espacio reservado para un depoimento real de cliente]"</p>
+        <div class="depoimento__autor">
+          <span class="depoimento__avatar">?</span>
+          <div><div class="depoimento__nome">[Nombre del cliente]</div><div class="depoimento__local">[Ciudad, país]</div></div>
+        </div>
+      </div>
+      <div class="depoimento__card">
+        <div class="depoimento__estrelas">★★★★★</div>
+        <p class="depoimento__texto">"[Espacio reservado para un depoimento real de cliente]"</p>
+        <div class="depoimento__autor">
+          <span class="depoimento__avatar">?</span>
+          <div><div class="depoimento__nome">[Nombre del cliente]</div><div class="depoimento__local">[Ciudad, país]</div></div>
+        </div>
+      </div>
+      <div class="depoimento__card">
+        <div class="depoimento__estrelas">★★★★★</div>
+        <p class="depoimento__texto">"[Espacio reservado para un depoimento real de cliente]"</p>
+        <div class="depoimento__autor">
+          <span class="depoimento__avatar">?</span>
+          <div><div class="depoimento__nome">[Nombre del cliente]</div><div class="depoimento__local">[Ciudad, país]</div></div>
+        </div>
+      </div>
+    </div>
+    <p class="depoimentos__aviso">⚠️ Sección de ejemplo — reemplaza estos 3 cards por depoimentos reales de tus clientes (nombre, ciudad y print de conversación, si es posible) antes de publicar la página.</p>
+  </div>
+</section>
+
+<!-- ====== AUTORIDADE ======
+     TODO: adicione uma foto real do criador/equipe em vez do selo com emoji -->
+<section class="autoridade">
+  <div class="container autoridade__inner">
+    <div class="autoridade__selo">✝️</div>
+    <div>
+      <p class="autoridade__nome">Sobre Código Divino</p>
+      <p class="autoridade__bio">
+        Código Divino nació de la necesidad de miles de cristianos que amaban la Palabra pero se sentían perdidos al estudiarla por su cuenta. Hoy ayudamos a creyentes en toda Latinoamérica a construir un hábito de estudio bíblico claro, visual y sostenible — sin necesidad de seminario ni años de experiencia.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== OFERTA / PREÇO ====== -->
+<section class="oferta" id="oferta">
+  <h2 class="secao__titulo">Todo esto por una fracción de su valor</h2>
+  <p class="secao__subtitulo">Método completo + 5 bonos exclusivos, disponible hoy con precio de lanzamiento.</p>
+  <div class="oferta__card">
+    <p class="oferta__valor-total">Valor total: <s>$144</s></p>
+    <p class="oferta__preco-hoje">Precio de lanzamiento — hoy</p>
+    <p class="oferta__preco"><small>$</small>14,90</p>
+    <p class="oferta__parcelas">Pago único · sin suscripciones · en tu moneda local</p>
+
+    <div>
+      <p class="oferta__contador-label">Esta oferta termina en</p>
+      <div class="oferta__contador" id="contador-oferta">--:--:--</div>
+    </div>
+
+    <a href="#" id="btn-comprar-principal" class="btn-cta">🔓 QUIERO EL CÓDIGO DIVINO AHORA</a>
+    <p class="form-microcopy claro">🔒 Pago 100% seguro · Acceso inmediato por correo electrónico</p>
+
+    <div class="oferta__pagamentos">
+      <span>💳 Tarjeta</span>
+      <span>🏦 Transferencia</span>
+      <span>📱 Billeteras digitales</span>
+    </div>
+    <p class="oferta__garantia-mini">🛡️ Garantía incondicional de 7 días</p>
+  </div>
+</section>
+
+<!-- ====== GARANTIA ====== -->
+<section class="garantia" id="garantia">
+  <div class="container">
+    <div class="garantia__selo">🛡️</div>
+    <h2 class="secao__titulo">Garantía de 7 días, sin preguntas</h2>
+    <p class="garantia__texto">
+      Si dentro de los próximos <strong>7 días</strong> sientes que Código Divino no es para ti, te devolvemos el <strong>100% de tu inversión</strong>. Sin condiciones, sin preguntas incómodas. El riesgo es todo nuestro.
+    </p>
+  </div>
+</section>
+
+<!-- ====== FAQ ====== -->
+<section class="faq" id="faq">
+  <div class="container">
+    <h2 class="secao__titulo">Preguntas frecuentes</h2>
+    <div class="faq__lista">
+      <div class="faq__item">
+        <button class="faq__pergunta" onclick="toggleFaq(this)">¿Cómo recibo el material? <span class="icone">+</span></button>
+        <div class="faq__resposta"><p>Acceso inmediato por correo electrónico apenas se confirme el pago. Podrás verlo en tu celular, tablet o computadora.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__pergunta" onclick="toggleFaq(this)">¿Necesito experiencia previa estudiando la Biblia? <span class="icone">+</span></button>
+        <div class="faq__resposta"><p>No. El Método V.E.R. está diseñado para empezar desde cero, sin conocimientos teológicos previos.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__pergunta" onclick="toggleFaq(this)">¿Es una suscripción que se renueva? <span class="icone">+</span></button>
+        <div class="faq__resposta"><p>No. Es un pago único con acceso de por vida al material y a las actualizaciones futuras.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__pergunta" onclick="toggleFaq(this)">¿Funciona en cualquier dispositivo? <span class="icone">+</span></button>
+        <div class="faq__resposta"><p>Sí. El material es 100% digital y compatible con celular, tablet o computadora, disponible para leer en pantalla o imprimir.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__pergunta" onclick="toggleFaq(this)">¿Qué pasa si no me gusta? <span class="icone">+</span></button>
+        <div class="faq__resposta"><p>Tienes 7 días de garantía incondicional. Si no te sirve, te devolvemos el 100% de tu dinero, sin preguntas.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__pergunta" onclick="toggleFaq(this)">¿En qué moneda se cobra? <span class="icone">+</span></button>
+        <div class="faq__resposta"><p>El pago se procesa en tu moneda local a través de una pasarela segura, con el equivalente al precio mostrado en dólares.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA FINAL ====== -->
+<section class="cta-final">
+  <div class="container">
+    <h2 class="cta-final__titulo">Tu Biblia está esperando que la entiendas de verdad</h2>
+    <p class="cta-final__sub">Empieza hoy con el Método V.E.R. y los 5 bonos exclusivos, con garantía de 7 días.</p>
+    <a href="#oferta" class="btn-cta">✅ QUIERO EMPEZAR AHORA</a>
+  </div>
+</section>
+
+<!-- ====== RODAPÉ ====== -->
+<footer>
+  <p>© <span id="ano-atual"></span> Código Divino. Todos los derechos reservados.</p>
+  <p><a href="/privacidad.html">Política de Privacidad</a> · <a href="/terminos.html">Términos de Uso</a></p>
+  <p class="disclaimer">Este sitio no está afiliado a Facebook/Meta ni a ninguna red social. Los resultados de estudio dependen de la constancia individual.</p>
+</footer>
+
+<!-- ====== BARRA CTA FIXA (MOBILE) ====== -->
+<div class="barra-fixa" id="barra-fixa">
+  <div class="barra-fixa__preco">$14,90 <small>Precio de lanzamiento</small></div>
+  <a href="#" id="btn-comprar-fixo" class="btn-cta">Comprar</a>
+</div>
+
+<script>
+  // ============================================
+  // CONFIGURAÇÃO — edite aqui antes de publicar
+  // ============================================
+  const CONFIG = {
+    // Link de checkout (Hotmart, Kiwify, Cakto, etc.) — troque pelo link real
+    linkCheckout: 'LINK_CHECKOUT_AQUI',
+    // Data-limite real da oferta (ISO). Ajuste para uma data real de encerramento.
+    dataLimiteOferta: '2026-08-06T23:59:59',
+    // Valor numérico do produto, usado nos eventos de rastreamento
+    valorProduto: 14.90,
+    moeda: 'USD'
+  };
+
+  document.getElementById('btn-comprar-principal').href = CONFIG.linkCheckout;
+  document.getElementById('btn-comprar-fixo').href = CONFIG.linkCheckout;
+
+  // Dispara InitiateCheckout ao clicar em qualquer CTA de compra
+  document.querySelectorAll('#btn-comprar-principal, #btn-comprar-fixo').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'InitiateCheckout', { value: CONFIG.valorProduto, currency: CONFIG.moeda });
+      }
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'initiate_checkout', value: CONFIG.valorProduto, currency: CONFIG.moeda });
+    });
+  });
+
+  // ============================================
+  // CONTADOR REGRESSIVO (baseado em data real, não some ao recarregar)
+  // ============================================
+  function iniciarContador(elementoId) {
+    const el = document.getElementById(elementoId);
+    if (!el) return;
+    const fim = new Date(CONFIG.dataLimiteOferta).getTime();
+
+    function atualizar() {
+      const agora = new Date().getTime();
+      const dist = fim - agora;
+      if (dist < 0) {
+        el.innerHTML = 'Oferta finalizada';
+        return;
+      }
+      const h = Math.floor(dist / (1000 * 60 * 60));
+      const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((dist % (1000 * 60)) / 1000);
+      el.innerHTML = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+    }
+    atualizar();
+    setInterval(atualizar, 1000);
+  }
+  iniciarContador('contador-topo');
+  iniciarContador('contador-oferta');
+
+  // ============================================
+  // FAQ ACCORDION
+  // ============================================
+  function toggleFaq(botao) {
+    const item = botao.parentElement;
+    const resposta = item.querySelector('.faq__resposta');
+    const estavaAberto = item.classList.contains('aberto');
+
+    document.querySelectorAll('.faq__item.aberto').forEach(function (aberto) {
+      aberto.classList.remove('aberto');
+      aberto.querySelector('.faq__resposta').style.maxHeight = null;
+    });
+
+    if (!estavaAberto) {
+      item.classList.add('aberto');
+      resposta.style.maxHeight = resposta.scrollHeight + 40 + 'px';
+    }
+  }
+
+  // ============================================
+  // BARRA FIXA (mobile) — aparece após rolar a hero
+  // ============================================
+  const barraFixa = document.getElementById('barra-fixa');
+  const ofertaSecao = document.getElementById('oferta');
+  window.addEventListener('scroll', function () {
+    const scrollY = window.scrollY || window.pageYOffset;
+    const ofertaTop = ofertaSecao.offsetTop;
+    if (scrollY > 500 && scrollY < ofertaTop - 200) {
+      barraFixa.classList.add('visivel');
+    } else {
+      barraFixa.classList.remove('visivel');
+    }
+  });
+
+  // ============================================
+  // ANO ATUAL NO RODAPÉ
+  // ============================================
+  document.getElementById('ano-atual').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
