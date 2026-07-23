@@ -20,10 +20,10 @@
 <!-- Favicon (emoji inline, sem dependência externa) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%96%3C/text%3E%3C/svg%3E">
 
-<!-- Google Fonts -->
+<!-- Google Fonts — Poppins (títulos) + Nunito (corpo): combinação arredondada e amigável -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
 <!-- ============================================
      META PIXEL — troque SEU_PIXEL_ID pelo ID real
@@ -67,8 +67,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     --cor-corpo: #2B2118;           /* marrom escuro — texto sobre fundo claro */
     --cor-borda: #E3D6B4;
     --sombra-card: 0 4px 18px rgba(43, 33, 24, 0.08);
-    --fonte-titulo: 'Playfair Display', serif;
-    --fonte-corpo: 'Inter', sans-serif;
+    --fonte-titulo: 'Poppins', sans-serif;   /* arredondada e amigável, sem formalidade excessiva */
+    --fonte-corpo: 'Nunito', sans-serif;      /* alta legibilidade, terminações suaves */
   }
 
   /* ============================================
@@ -167,7 +167,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     letter-spacing: 0.4px;
     padding: 18px 22px;
     border: none;
-    border-radius: 10px;
+    border-radius: 14px;
     cursor: pointer;
     box-shadow: 0 6px 20px rgba(201,162,39,0.35);
     transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
@@ -231,7 +231,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     gap: 12px;
     background: #fff;
     border: 1px solid var(--cor-borda);
-    border-radius: 10px;
+    border-radius: 14px;
     padding: 16px 18px;
     font-size: 15.5px;
   }
@@ -256,7 +256,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .metodo__card {
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(201,162,39,0.3);
-    border-radius: 14px;
+    border-radius: 18px;
     padding: 24px;
   }
   .metodo__letra {
@@ -284,7 +284,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     align-items: flex-start;
     gap: 16px;
     background: #fff;
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 20px;
     box-shadow: var(--sombra-card);
   }
@@ -306,10 +306,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .paraquem__card {
     background: #fff;
     border: 1px solid var(--cor-borda);
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 18px 14px;
     text-align: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
+  .paraquem__card:hover { transform: translateY(-3px); box-shadow: var(--sombra-card); }
   .paraquem__icone { font-size: 26px; margin-bottom: 8px; }
   .paraquem__card p { font-size: 14px; font-weight: 600; color: var(--cor-corpo); }
 
@@ -324,7 +326,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     gap: 16px;
     background: #fff;
     border: 2px dashed var(--cor-primaria);
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 16px 18px;
   }
   .bonos__numero {
@@ -358,7 +360,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .depoimentos__grid { display: flex; flex-direction: column; gap: 16px; max-width: 640px; margin: 0 auto; }
   .depoimento__card {
     background: #fff;
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 20px;
     box-shadow: var(--sombra-card);
   }
@@ -397,25 +399,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .autoridade__bio { font-size: 15px; color: var(--cor-texto-claro); line-height: 1.7; }
 
   /* ============================================
-     OFERTA / PREÇO
+     OFERTA / PREÇO — dois planos
   ============================================ */
   .oferta { background: linear-gradient(180deg, var(--cor-fundo-alt), var(--cor-fundo)); }
-  .oferta__card {
-    max-width: 520px;
-    margin: 0 auto;
-    background: #fff;
-    border: 2px solid var(--cor-primaria);
-    border-radius: 18px;
-    padding: 32px 24px;
-    text-align: center;
-    box-shadow: 0 10px 40px rgba(43,33,24,0.12);
-  }
-  .oferta__valor-total { font-size: 15px; color: #8A7A5C; margin-bottom: 6px; }
-  .oferta__valor-total s { color: #B0A080; }
-  .oferta__preco-hoje { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--cor-primaria-escura); font-weight: 700; margin-bottom: 6px; }
-  .oferta__preco { font-family: var(--fonte-titulo); font-size: clamp(42px, 9vw, 58px); font-weight: 800; color: var(--cor-secundaria); line-height: 1; }
-  .oferta__preco small { font-size: 18px; font-weight: 600; }
-  .oferta__parcelas { font-size: 13.5px; color: #8A7A5C; margin: 8px 0 22px; }
   .oferta__contador {
     display: flex; justify-content: center; gap: 6px;
     font-variant-numeric: tabular-nums;
@@ -425,17 +411,74 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: #B23A2E;
     background: #FDF0EE;
     border: 1px solid #F0C9C3;
-    border-radius: 10px;
+    border-radius: 14px;
     padding: 10px 16px;
-    margin-bottom: 22px;
+    margin-bottom: 36px;
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .oferta__contador-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #B23A2E; font-weight: 700; margin-bottom: 6px; }
-  .oferta__pagamentos { display: flex; justify-content: center; gap: 10px; margin-top: 18px; font-size: 12px; color: #8A7A5C; flex-wrap: wrap; }
-  .oferta__pagamentos span { background: var(--cor-fundo-alt); padding: 5px 10px; border-radius: 6px; }
+  .oferta__contador-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #B23A2E; font-weight: 700; margin-bottom: 6px; text-align: center; }
+  .oferta__pagamentos { display: flex; justify-content: center; gap: 10px; margin-top: 6px; font-size: 12px; color: #8A7A5C; flex-wrap: wrap; }
+  .oferta__pagamentos span { background: var(--cor-fundo-alt); padding: 5px 10px; border-radius: 8px; }
   .oferta__garantia-mini {
     margin-top: 20px; font-size: 13px; color: #6B5F49;
     display: flex; align-items: center; justify-content: center; gap: 6px;
   }
+
+  .planos__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .plano__card {
+    position: relative;
+    background: #fff;
+    border: 2px solid var(--cor-borda);
+    border-radius: 22px;
+    padding: 32px 24px 28px;
+    text-align: center;
+    box-shadow: 0 6px 24px rgba(43,33,24,0.08);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .plano__card--completo {
+    border: 2px solid var(--cor-primaria);
+    box-shadow: 0 12px 40px rgba(201,162,39,0.28);
+  }
+  .plano__ribbon {
+    position: absolute;
+    top: -15px; left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-primaria-escura));
+    color: #1A1409;
+    font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;
+    padding: 7px 18px; border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(201,162,39,0.4);
+    white-space: nowrap;
+  }
+  .plano__nombre { font-size: 19px; font-weight: 700; color: var(--cor-secundaria); margin-bottom: 4px; }
+  .plano__desc { font-size: 13.5px; color: #8A7A5C; margin-bottom: 18px; }
+  .plano__valor-total { font-size: 14px; color: #8A7A5C; margin-bottom: 4px; }
+  .plano__valor-total s { color: #B0A080; }
+  .plano__preco { font-family: var(--fonte-titulo); font-size: clamp(36px, 8vw, 46px); font-weight: 800; color: var(--cor-secundaria); line-height: 1; }
+  .plano__preco small { font-size: 16px; font-weight: 600; }
+  .plano__parcelas { font-size: 12.5px; color: #8A7A5C; margin: 6px 0 20px; }
+  .plano__lista { text-align: left; display: flex; flex-direction: column; gap: 9px; margin-bottom: 24px; font-size: 13.5px; color: #4A3F30; flex: 1; }
+  .plano__lista li { display: flex; align-items: flex-start; gap: 8px; }
+  .plano__lista .check { color: #2E7D32; flex-shrink: 0; font-weight: 800; }
+  .plano__lista .nao-incluido { color: #A99B84; }
+  .plano__lista .nao-incluido .check { color: #C9B896; }
+  .btn-cta--outline {
+    background: #fff;
+    color: var(--cor-primaria-escura);
+    border: 2px solid var(--cor-primaria);
+    box-shadow: none;
+  }
+  .btn-cta--outline:hover { background: var(--cor-fundo-alt); box-shadow: none; }
 
   /* ============================================
      GARANTIA
@@ -456,7 +499,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      FAQ
   ============================================ */
   .faq__lista { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
-  .faq__item { background: #fff; border: 1px solid var(--cor-borda); border-radius: 10px; overflow: hidden; }
+  .faq__item { background: #fff; border: 1px solid var(--cor-borda); border-radius: 14px; overflow: hidden; }
   .faq__pergunta {
     width: 100%; text-align: left; background: none; border: none; cursor: pointer;
     padding: 16px 18px; font-size: 15px; font-weight: 700; color: var(--cor-secundaria);
@@ -494,6 +537,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   footer .disclaimer { max-width: 480px; margin: 14px auto 0; font-size: 11px; color: #665F73; }
 
   /* ============================================
+     NOTIFICAÇÃO DE COMPRA (prova social simulada, canto superior esquerdo)
+  ============================================ */
+  .notif-compra {
+    position: fixed;
+    left: 14px;
+    z-index: 900;
+    background: #fff;
+    border: 1px solid var(--cor-borda);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(43,33,24,0.16);
+    padding: 12px 34px 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 260px;
+    transform: translateX(-130%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    pointer-events: none;
+  }
+  .notif-compra.visivel { transform: translateX(0); opacity: 1; pointer-events: auto; }
+  .notif-compra__icone { font-size: 22px; flex-shrink: 0; }
+  .notif-compra__texto { font-size: 12.5px; color: #4A3F30; line-height: 1.45; }
+  .notif-compra__texto strong { color: var(--cor-secundaria); }
+  .notif-compra__tiempo { color: #8A7A5C; font-size: 11px; }
+  .notif-compra__fechar {
+    position: absolute; top: 5px; right: 7px;
+    background: none; border: none; font-size: 15px; color: #B0A080; cursor: pointer; line-height: 1;
+    padding: 4px; font-family: var(--fonte-corpo);
+  }
+  @media (max-width: 480px) {
+    .notif-compra { max-width: calc(100vw - 28px); padding: 10px 30px 10px 12px; }
+    .notif-compra__icone { font-size: 18px; }
+    .notif-compra__texto { font-size: 11.5px; }
+  }
+
+  /* ============================================
      BARRA CTA FIXA (mobile)
   ============================================ */
   .barra-fixa {
@@ -517,6 +597,65 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .barra-fixa .btn-cta { padding: 12px 18px; font-size: 13px; width: auto; }
 
   /* ============================================
+     MODAL OFERTA DE SAÍDA (back-redirect)
+  ============================================ */
+  .modal-salida {
+    position: fixed; inset: 0; z-index: 1200;
+    display: none;
+    align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .modal-salida.visivel { display: flex; }
+  .modal-salida__overlay {
+    position: absolute; inset: 0;
+    background: rgba(12,10,26,0.74);
+  }
+  .modal-salida__card {
+    position: relative;
+    background: #fff;
+    border-radius: 22px;
+    border: 2px solid var(--cor-primaria);
+    padding: 32px 26px 26px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    animation: modalPop 0.35s ease;
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+  @keyframes modalPop {
+    from { transform: scale(0.92); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  .modal-salida__fechar {
+    position: absolute; top: 12px; right: 14px;
+    background: none; border: none; font-size: 22px; color: #B0A080; cursor: pointer; line-height: 1;
+    font-family: var(--fonte-corpo);
+  }
+  .modal-salida__icone { font-size: 38px; margin-bottom: 6px; }
+  .modal-salida__titulo { font-size: clamp(22px, 5vw, 27px); font-weight: 800; color: var(--cor-secundaria); margin-bottom: 10px; }
+  .modal-salida__texto { font-size: 14.5px; color: #4A3F30; margin-bottom: 16px; line-height: 1.6; }
+  .modal-salida__texto strong { color: var(--cor-primaria-escura); }
+  .modal-salida__precos { display: flex; align-items: baseline; justify-content: center; gap: 12px; margin-bottom: 4px; }
+  .modal-salida__precoAntes { font-size: 18px; color: #B0A080; text-decoration: line-through; }
+  .modal-salida__precoAgora { font-family: var(--fonte-titulo); font-size: 38px; font-weight: 800; color: var(--cor-secundaria); }
+  .modal-salida__contador-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #B23A2E; font-weight: 700; margin: 10px 0 4px; }
+  .modal-salida__contador {
+    font-variant-numeric: tabular-nums;
+    font-family: var(--fonte-titulo);
+    font-size: 24px; font-weight: 800; color: #B23A2E;
+    background: #FDF0EE; border: 1px solid #F0C9C3; border-radius: 12px;
+    padding: 8px 16px; display: inline-block; margin-bottom: 20px;
+  }
+  .modal-salida__recusar {
+    display: block; width: 100%; background: none; border: none;
+    color: #8A7A5C; font-size: 12.5px; margin-top: 12px; cursor: pointer;
+    text-decoration: underline;
+    font-family: var(--fonte-corpo);
+  }
+
+  /* ============================================
      DESKTOP
   ============================================ */
   @media (min-width: 768px) {
@@ -527,6 +666,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .autoridade__selo { margin: 0; flex-shrink: 0; }
     .barra-fixa { max-width: 480px; left: 50%; transform: translate(-50%, 120%); border-radius: 14px 14px 0 0; }
     .barra-fixa.visivel { transform: translate(-50%, 0); }
+    .planos__grid { flex-direction: row; align-items: stretch; }
+    .plano__card--completo { transform: translateY(-8px); }
+    .depoimentos__grid { flex-direction: row; }
+    .depoimento__card { flex: 1; }
+    .notif-compra { left: 24px; max-width: 280px; }
+  }
+
+  /* ============================================
+     TELAS PEQUENAS (iPhone SE / Android compacto)
+  ============================================ */
+  @media (max-width: 380px) {
+    .hero { padding: 40px 14px 32px; }
+    section { padding: 44px 14px; }
+    .plano__card { padding: 26px 18px 22px; }
+    .oferta__contador { font-size: 22px; padding: 8px 12px; }
+    .barra-urgencia { font-size: 12px; padding: 8px 10px; }
   }
 </style>
 </head>
@@ -538,7 +693,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ====== BARRA DE URGÊNCIA ====== -->
 <div class="barra-urgencia">
-  🔥 Oferta de lanzamiento termina en <strong><span id="contador-topo">--:--:--</span></strong>
+  🔥 Esta oferta termina hoy a medianoche: <strong><span id="contador-topo">--:--:--</span></strong>
+</div>
+
+<!-- ====== NOTIFICAÇÃO DE COMPRA (prova social simulada) ======
+     AVISO: dados fictícios, gerados no navegador para fins de prova social.
+     Substitua por dados reais (via webhook da plataforma de pagamento) assim que
+     houver volume suficiente de vendas. -->
+<div class="notif-compra" id="notif-compra">
+  <button class="notif-compra__fechar" onclick="fecharNotificacao()" aria-label="Cerrar">×</button>
+  <span class="notif-compra__icone">🛒</span>
+  <span class="notif-compra__texto">
+    <strong id="notif-nombre">María</strong> de <span id="notif-ciudad">Bogotá</span> acaba de comprar Código Divino<br>
+    <span class="notif-compra__tiempo" id="notif-tiempo">hace 2 minutos</span>
+  </span>
 </div>
 
 <!-- ====== HERO ====== -->
@@ -574,7 +742,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="form-microcopy">🔒 Acceso inmediato · Pago 100% seguro · Garantía de 7 días</p>
 
     <p class="hero__estrelas">★★★★★ <span>4.9/5 — más de 4.000 cristianos ya lo están usando</span></p>
-    <p class="hero__preco-teaser">Precio de lanzamiento desde <strong>$14,90</strong></p>
+    <p class="hero__preco-teaser">Precio de lanzamiento desde <strong>$9,90</strong></p>
   </div>
 </section>
 
@@ -685,8 +853,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ====== BÔNUS ====== -->
 <section class="bonos" id="bonos">
   <div class="container">
-    <h2 class="secao__titulo">Además, hoy recibes 5 bonos exclusivos</h2>
-    <p class="bonos__intro">Por tiempo limitado, cada compra incluye estos 5 recursos adicionales — totalmente gratis.</p>
+    <h2 class="secao__titulo">Además, el Plan Completo incluye 5 bonos exclusivos</h2>
+    <p class="bonos__intro">Por tiempo limitado, el Plan Completo incluye estos 5 recursos adicionales — totalmente gratis.</p>
     <ul class="bonos__lista">
       <li class="bonos__item">
         <span class="bonos__numero">01</span>
@@ -705,7 +873,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </li>
       <li class="bonos__item">
         <span class="bonos__numero">04</span>
-        <div><h3>Devocionales de Poder — 30 Días</h3><p>Un devocional diario adicional para fortalecer tu caminar espiritual.</p></div>
+        <div><h3>Devocionales de Poder — Refuerzo Diario</h3><p>Un devocional diario adicional para fortalecer tu caminar espiritual.</p></div>
         <div class="bonos__valor"><s>$19</s><strong>GRATIS</strong></div>
       </li>
       <li class="bonos__item">
@@ -769,31 +937,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ====== OFERTA / PREÇO ====== -->
+<!-- ====== OFERTA / PREÇO — DOIS PLANOS ====== -->
 <section class="oferta" id="oferta">
-  <h2 class="secao__titulo">Todo esto por una fracción de su valor</h2>
-  <p class="secao__subtitulo">Método completo + 5 bonos exclusivos, disponible hoy con precio de lanzamiento.</p>
-  <div class="oferta__card">
-    <p class="oferta__valor-total">Valor total: <s>$144</s></p>
-    <p class="oferta__preco-hoje">Precio de lanzamiento — hoy</p>
-    <p class="oferta__preco"><small>$</small>14,90</p>
-    <p class="oferta__parcelas">Pago único · sin suscripciones · en tu moneda local</p>
+  <h2 class="secao__titulo">Elige tu plan y empieza hoy</h2>
+  <p class="secao__subtitulo">Dos formas de acceder al Método V.E.R. — elige la que mejor se ajuste a ti.</p>
 
-    <div>
-      <p class="oferta__contador-label">Esta oferta termina en</p>
-      <div class="oferta__contador" id="contador-oferta">--:--:--</div>
-    </div>
-
-    <a href="#" id="btn-comprar-principal" class="btn-cta">🔓 QUIERO EL CÓDIGO DIVINO AHORA</a>
-    <p class="form-microcopy claro">🔒 Pago 100% seguro · Acceso inmediato por correo electrónico</p>
-
-    <div class="oferta__pagamentos">
-      <span>💳 Tarjeta</span>
-      <span>🏦 Transferencia</span>
-      <span>📱 Billeteras digitales</span>
-    </div>
-    <p class="oferta__garantia-mini">🛡️ Garantía incondicional de 7 días</p>
+  <div>
+    <p class="oferta__contador-label">Esta oferta termina hoy a medianoche</p>
+    <div class="oferta__contador" id="contador-oferta">--:--:--</div>
   </div>
+
+  <div class="planos__grid">
+    <!-- PLAN BÁSICO: solo el produto principal, sem bônus -->
+    <div class="plano__card">
+      <p class="plano__nombre">📘 Plan Básico</p>
+      <p class="plano__desc">Solo el Método V.E.R. completo</p>
+      <p class="plano__valor-total">Valor: <s>$67</s></p>
+      <p class="plano__preco"><small>$</small>9,90</p>
+      <p class="plano__parcelas">Pago único · en tu moneda local</p>
+      <ul class="plano__lista">
+        <li><span class="check">✓</span> Génesis Verso a Verso</li>
+        <li><span class="check">✓</span> Éxodo Explicado</li>
+        <li><span class="check">✓</span> Levítico Sin Complicaciones</li>
+        <li><span class="check">✓</span> Josué en Resúmenes Temáticos</li>
+        <li><span class="check">✓</span> Devocional Guiado de 30 Días</li>
+        <li class="nao-incluido"><span class="check">✕</span> Sin los 5 bonos exclusivos</li>
+      </ul>
+      <a href="#" id="btn-comprar-basico" class="btn-cta btn-cta--outline">QUIERO EL PLAN BÁSICO</a>
+    </div>
+
+    <!-- PLAN COMPLETO: produto principal + 5 bônus -->
+    <div class="plano__card plano__card--completo">
+      <span class="plano__ribbon">⭐ Más elegido</span>
+      <p class="plano__nombre">🎁 Plan Completo</p>
+      <p class="plano__desc">Método V.E.R. + 5 bonos exclusivos</p>
+      <p class="plano__valor-total">Valor total: <s>$144</s></p>
+      <p class="plano__preco"><small>$</small>14,90</p>
+      <p class="plano__parcelas">Pago único · en tu moneda local</p>
+      <ul class="plano__lista">
+        <li><span class="check">✓</span> Todo lo del Plan Básico</li>
+        <li><span class="check">✓</span> Los 10 Mandamientos Explicados</li>
+        <li><span class="check">✓</span> Milagros de Jesús Visualizados</li>
+        <li><span class="check">✓</span> Historias Bíblicas para la Familia</li>
+        <li><span class="check">✓</span> Devocionales de Poder — Refuerzo Diario</li>
+        <li><span class="check">✓</span> Manual de Interpretación Bíblica</li>
+      </ul>
+      <a href="#" id="btn-comprar-completo" class="btn-cta">🔓 QUIERO EL PLAN COMPLETO</a>
+    </div>
+  </div>
+
+  <p class="form-microcopy claro" style="text-align:center; margin-top:22px;">🔒 Pago 100% seguro · Acceso inmediato por correo electrónico</p>
+
+  <div class="oferta__pagamentos">
+    <span>💳 Tarjeta</span>
+    <span>🏦 Transferencia</span>
+    <span>📱 Billeteras digitales</span>
+  </div>
+  <p class="oferta__garantia-mini">🛡️ Garantía incondicional de 7 días en ambos planes</p>
 </section>
 
 <!-- ====== GARANTIA ====== -->
@@ -815,6 +1015,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="faq__item">
         <button class="faq__pergunta" onclick="toggleFaq(this)">¿Cómo recibo el material? <span class="icone">+</span></button>
         <div class="faq__resposta"><p>Acceso inmediato por correo electrónico apenas se confirme el pago. Podrás verlo en tu celular, tablet o computadora.</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__pergunta" onclick="toggleFaq(this)">¿Cuál es la diferencia entre el Plan Básico y el Plan Completo? <span class="icone">+</span></button>
+        <div class="faq__resposta"><p>El Plan Básico incluye el Método V.E.R. completo (Génesis, Éxodo, Levítico, Josué y el devocional de 30 días). El Plan Completo incluye todo eso más los 5 bonos exclusivos, por una diferencia de solo $5.</p></div>
       </div>
       <div class="faq__item">
         <button class="faq__pergunta" onclick="toggleFaq(this)">¿Necesito experiencia previa estudiando la Biblia? <span class="icone">+</span></button>
@@ -844,7 +1048,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="cta-final">
   <div class="container">
     <h2 class="cta-final__titulo">Tu Biblia está esperando que la entiendas de verdad</h2>
-    <p class="cta-final__sub">Empieza hoy con el Método V.E.R. y los 5 bonos exclusivos, con garantía de 7 días.</p>
+    <p class="cta-final__sub">Elige tu plan y empieza hoy con el Método V.E.R., con garantía de 7 días.</p>
     <a href="#oferta" class="btn-cta">✅ QUIERO EMPEZAR AHORA</a>
   </div>
 </section>
@@ -858,8 +1062,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ====== BARRA CTA FIXA (MOBILE) ====== -->
 <div class="barra-fixa" id="barra-fixa">
-  <div class="barra-fixa__preco">$14,90 <small>Precio de lanzamiento</small></div>
-  <a href="#" id="btn-comprar-fixo" class="btn-cta">Comprar</a>
+  <div class="barra-fixa__preco">Desde $9,90 <small>Precio de lanzamiento</small></div>
+  <a href="#oferta" class="btn-cta">Ver planes</a>
+</div>
+
+<!-- ====== MODAL OFERTA DE SAÍDA (back-redirect) ======
+     Aparece 1x por sessão quando o lead tenta voltar/sair da página. -->
+<div class="modal-salida" id="modal-salida">
+  <div class="modal-salida__overlay" onclick="cerrarOfertaSalida()"></div>
+  <div class="modal-salida__card">
+    <button class="modal-salida__fechar" onclick="cerrarOfertaSalida()" aria-label="Cerrar">×</button>
+    <p class="modal-salida__icone">🙏</p>
+    <h2 class="modal-salida__titulo">¡Espera un momento!</h2>
+    <p class="modal-salida__texto">Antes de irte, tenemos una última oferta solo para ti: lleva el <strong>Plan Completo</strong> (con los 5 bonos) al mismo precio del Plan Básico.</p>
+    <div class="modal-salida__precos">
+      <span class="modal-salida__precoAntes">$14,90</span>
+      <span class="modal-salida__precoAgora">$9,90</span>
+    </div>
+    <p class="modal-salida__contador-label">Esta oferta especial expira en</p>
+    <div class="modal-salida__contador" id="contador-salida">10:00</div>
+    <a href="#" id="btn-oferta-salida" class="btn-cta">🔓 QUIERO ESTA OFERTA ÚNICA</a>
+    <button class="modal-salida__recusar" onclick="cerrarOfertaSalida()">No, prefiero pagar más después</button>
+  </div>
 </div>
 
 <script>
@@ -867,40 +1091,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   // CONFIGURAÇÃO — edite aqui antes de publicar
   // ============================================
   const CONFIG = {
-    // Link de checkout (Hotmart, Kiwify, Cakto, etc.) — troque pelo link real
-    linkCheckout: 'LINK_CHECKOUT_AQUI',
-    // Data-limite real da oferta (ISO). Ajuste para uma data real de encerramento.
-    dataLimiteOferta: '2026-08-06T23:59:59',
-    // Valor numérico do produto, usado nos eventos de rastreamento
-    valorProduto: 14.90,
+    // Link de checkout do Plan Básico (Hotmart, Kiwify, Cakto, etc.) — troque pelo link real
+    linkCheckoutBasico: 'LINK_CHECKOUT_BASICO_AQUI',
+    // Link de checkout do Plan Completo — troque pelo link real
+    linkCheckoutCompleto: 'LINK_CHECKOUT_COMPLETO_AQUI',
+    // Link de checkout da oferta especial de saída (pop-up de back-redirect). Se vazio, usa o do Plan Completo.
+    linkCheckoutOfertaSalida: '',
+    // Valores numéricos usados nos eventos de rastreamento
+    valorBasico: 9.90,
+    valorCompleto: 14.90,
     moeda: 'USD'
   };
 
-  document.getElementById('btn-comprar-principal').href = CONFIG.linkCheckout;
-  document.getElementById('btn-comprar-fixo').href = CONFIG.linkCheckout;
+  document.getElementById('btn-comprar-basico').href = CONFIG.linkCheckoutBasico;
+  document.getElementById('btn-comprar-completo').href = CONFIG.linkCheckoutCompleto;
+  document.getElementById('btn-oferta-salida').href = CONFIG.linkCheckoutOfertaSalida || CONFIG.linkCheckoutCompleto;
 
   // Dispara InitiateCheckout ao clicar em qualquer CTA de compra
-  document.querySelectorAll('#btn-comprar-principal, #btn-comprar-fixo').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      if (typeof fbq !== 'undefined') {
-        fbq('track', 'InitiateCheckout', { value: CONFIG.valorProduto, currency: CONFIG.moeda });
-      }
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'initiate_checkout', value: CONFIG.valorProduto, currency: CONFIG.moeda });
-    });
-  });
+  function rastrearCheckout(valor) {
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'InitiateCheckout', { value: valor, currency: CONFIG.moeda });
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'initiate_checkout', value: valor, currency: CONFIG.moeda });
+  }
+  document.getElementById('btn-comprar-basico').addEventListener('click', function () { rastrearCheckout(CONFIG.valorBasico); });
+  document.getElementById('btn-comprar-completo').addEventListener('click', function () { rastrearCheckout(CONFIG.valorCompleto); });
+  document.getElementById('btn-oferta-salida').addEventListener('click', function () { rastrearCheckout(CONFIG.valorBasico); });
 
   // ============================================
-  // CONTADOR REGRESSIVO (baseado em data real, não some ao recarregar)
+  // CONTADOR REGRESSIVO — termina hoje à meia-noite no horário local de cada visitante
+  // (tempo real decorrido desde o acesso; reinicia naturalmente a cada novo dia/visita)
   // ============================================
   function iniciarContador(elementoId) {
     const el = document.getElementById(elementoId);
     if (!el) return;
-    const fim = new Date(CONFIG.dataLimiteOferta).getTime();
+    const agora = new Date();
+    const fim = new Date(agora.getFullYear(), agora.getMonth(), agora.getDate(), 23, 59, 59, 999).getTime();
 
     function atualizar() {
-      const agora = new Date().getTime();
-      const dist = fim - agora;
+      const dist = fim - new Date().getTime();
       if (dist < 0) {
         el.innerHTML = 'Oferta finalizada';
         return;
@@ -915,6 +1145,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
   iniciarContador('contador-topo');
   iniciarContador('contador-oferta');
+
+  // ============================================
+  // NOTIFICAÇÕES DE COMPRA (prova social simulada)
+  // AVISO: dados fictícios, gerados no navegador. Substitua por dados reais assim
+  // que houver volume de vendas — anúncios com prova social fabricada podem violar
+  // normas de publicidade/defesa do consumidor em alguns países. Use com responsabilidade.
+  // ============================================
+  const REGIONES_NOTIF = {
+    'America/Bogota': ['Bogotá', 'Medellín', 'Cali', 'Barranquilla'],
+    'America/Mexico_City': ['Ciudad de México', 'Guadalajara', 'Monterrey', 'Puebla'],
+    'America/Lima': ['Lima', 'Arequipa', 'Trujillo'],
+    'America/Argentina/Buenos_Aires': ['Buenos Aires', 'Córdoba', 'Rosario'],
+    'America/Santiago': ['Santiago', 'Valparaíso', 'Concepción'],
+    'America/Guayaquil': ['Quito', 'Guayaquil', 'Cuenca'],
+    'America/Caracas': ['Caracas', 'Maracaibo', 'Valencia'],
+    'America/El_Salvador': ['San Salvador', 'Santa Ana'],
+    'America/Guatemala': ['Ciudad de Guatemala', 'Quetzaltenango'],
+    'America/Tegucigalpa': ['Tegucigalpa', 'San Pedro Sula'],
+    'America/Managua': ['Managua', 'León'],
+    'America/Costa_Rica': ['San José', 'Alajuela'],
+    'America/Panama': ['Ciudad de Panamá', 'Colón'],
+    'America/Santo_Domingo': ['Santo Domingo', 'Santiago'],
+    'America/Montevideo': ['Montevideo', 'Salto'],
+    'America/Asuncion': ['Asunción', 'Ciudad del Este'],
+    'America/La_Paz': ['La Paz', 'Santa Cruz'],
+    'Europe/Madrid': ['Madrid', 'Barcelona', 'Sevilla']
+  };
+  const NOMBRES_NOTIF = ['María','Carlos','Ana','José','Laura','Miguel','Sofía','Daniel','Valentina','Andrés','Camila','Luis','Gabriela','Diego','Paula','Jorge','Fernanda','Ricardo','Isabella','Santiago','Rosa','Pedro'];
+
+  function obtenerCiudadesCercanas() {
+    let tz = 'America/Bogota';
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || tz; } catch (e) {}
+    return REGIONES_NOTIF[tz] || ['Bogotá', 'Ciudad de México', 'Lima', 'Buenos Aires', 'Santiago'];
+  }
+
+  function mostrarNotificacaoCompra() {
+    const el = document.getElementById('notif-compra');
+    if (!el || el.dataset.cerrado === '1') return;
+    const ciudades = obtenerCiudadesCercanas();
+    const nombre = NOMBRES_NOTIF[Math.floor(Math.random() * NOMBRES_NOTIF.length)];
+    const ciudad = ciudades[Math.floor(Math.random() * ciudades.length)];
+    const minutos = Math.floor(Math.random() * 12) + 1;
+
+    document.getElementById('notif-nombre').textContent = nombre;
+    document.getElementById('notif-ciudad').textContent = ciudad;
+    document.getElementById('notif-tiempo').textContent = 'hace ' + minutos + ' minuto' + (minutos > 1 ? 's' : '');
+
+    const barra = document.querySelector('.barra-urgencia');
+    el.style.top = ((barra ? barra.offsetHeight : 40) + 10) + 'px';
+
+    el.classList.add('visivel');
+    setTimeout(function () { el.classList.remove('visivel'); }, 6000);
+  }
+
+  function fecharNotificacao() {
+    const el = document.getElementById('notif-compra');
+    el.dataset.cerrado = '1';
+    el.classList.remove('visivel');
+  }
+
+  setTimeout(mostrarNotificacaoCompra, 4000);
+  setInterval(function () {
+    const el = document.getElementById('notif-compra');
+    if (el && el.dataset.cerrado !== '1') mostrarNotificacaoCompra();
+  }, 16000);
 
   // ============================================
   // FAQ ACCORDION
@@ -954,6 +1249,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   // ANO ATUAL NO RODAPÉ
   // ============================================
   document.getElementById('ano-atual').textContent = new Date().getFullYear();
+
+  // ============================================
+  // OFERTA DE SAÍDA (back-redirect) — aparece 1x por sessão ao tentar voltar
+  // pelo botão do navegador, ou ao mover o mouse para fora da janela (desktop).
+  // ============================================
+  (function () {
+    const CHAVE_JA_MOSTROU = 'codigoDivino_ofertaSalidaMostrada';
+    let contadorSalidaIniciado = false;
+
+    function jaMostrou() {
+      try { return sessionStorage.getItem(CHAVE_JA_MOSTROU) === '1'; } catch (e) { return false; }
+    }
+    function marcarMostrado() {
+      try { sessionStorage.setItem(CHAVE_JA_MOSTROU, '1'); } catch (e) {}
+    }
+
+    function iniciarContadorSalida() {
+      if (contadorSalidaIniciado) return;
+      contadorSalidaIniciado = true;
+      const el = document.getElementById('contador-salida');
+      let restante = 10 * 60;
+      const intervalo = setInterval(function () {
+        if (restante <= 0) { clearInterval(intervalo); return; }
+        restante--;
+        const m = Math.floor(restante / 60);
+        const s = restante % 60;
+        el.textContent = String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+      }, 1000);
+    }
+
+    window.mostrarOfertaSalida = function () {
+      if (jaMostrou()) return;
+      const modal = document.getElementById('modal-salida');
+      if (!modal) return;
+      modal.classList.add('visivel');
+      marcarMostrado();
+      iniciarContadorSalida();
+      if (typeof fbq !== 'undefined') fbq('trackCustom', 'OfertaSalidaExibida');
+    };
+
+    window.cerrarOfertaSalida = function () {
+      const modal = document.getElementById('modal-salida');
+      if (modal) modal.classList.remove('visivel');
+    };
+
+    // Intercepta o botão "voltar" do navegador
+    history.pushState(null, '', location.href);
+    window.addEventListener('popstate', function () {
+      if (!jaMostrou()) mostrarOfertaSalida();
+      history.pushState(null, '', location.href);
+    });
+
+    // Exit-intent no desktop: mouse sai pela borda superior da janela
+    document.addEventListener('mouseout', function (e) {
+      if (!e.relatedTarget && e.clientY <= 0 && !jaMostrou()) {
+        mostrarOfertaSalida();
+      }
+    });
+  })();
 </script>
 
 </body>
