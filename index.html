@@ -1294,16 +1294,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (modal) modal.classList.remove('visivel');
     };
 
-    // Intercepta o botão "voltar" do navegador
+    // Intercepta o botão/gesto "voltar" — funciona para botão físico, botão do
+    // navegador e voltar pelo teclado. Reforçamos com try/catch porque alguns
+    // navegadores limitam chamadas muito rápidas a pushState.
     history.pushState(null, '', location.href);
     window.addEventListener('popstate', function () {
       if (!jaMostrou()) mostrarOfertaSalida();
-      history.pushState(null, '', location.href);
+      try { history.pushState(null, '', location.href); } catch (e) {}
     });
 
     // Exit-intent no desktop: mouse sai pela borda superior da janela
     document.addEventListener('mouseout', function (e) {
       if (!e.relatedTarget && e.clientY <= 0 && !jaMostrou()) {
+        mostrarOfertaSalida();
+      }
+    });
+
+    // Exit-intent no mobile: o gesto de arrastar da borda esquerda (swipe-back
+    // do iOS Safari / "voltar preditivo" do Android) nem sempre dispara o
+    // popstate a tempo, pois o navegador já inicia a navegação antes do JS
+    // conseguir reagir. Detectamos o toque perto da borda como aviso antecipado.
+    document.addEventListener('touchstart', function (e) {
+      if (jaMostrou()) return;
+      const toque = e.touches && e.touches[0];
+      if (toque && toque.clientX <= 24) {
+        mostrarOfertaSalida();
+      }
+    }, { passive: true });
+
+    // Reforço: se o usuário chegar a sair e voltar via cache do navegador
+    // (gesto completo em algum dispositivo), mostramos ao retornar também.
+    window.addEventListener('pageshow', function (e) {
+      if (e.persisted && !jaMostrou()) {
         mostrarOfertaSalida();
       }
     });
