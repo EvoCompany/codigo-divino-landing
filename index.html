@@ -345,6 +345,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .bonos__item h3 { font-size: 15.5px; color: var(--cor-secundaria); margin-bottom: 3px; }
   .bonos__item p { font-size: 13.5px; color: #6B5F49; }
+  .bonos__conteudo { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
+  .bonos__thumb { width: 42px; height: auto; flex-shrink: 0; object-fit: contain; }
   .bonos__valor { margin-left: auto; text-align: right; flex-shrink: 0; }
   .bonos__valor s { font-size: 12px; color: #999; }
   .bonos__valor strong { display: block; font-size: 13px; color: #2E7D32; font-weight: 800; }
@@ -849,7 +851,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <ul class="bonos__lista">
       <li class="bonos__item">
         <span class="bonos__numero">01</span>
-        <div><h3>Los 10 Mandamientos Explicados</h3><p>Guía visual de cada mandamiento y su aplicación práctica hoy.</p></div>
+        <div class="bonos__conteudo">
+          <img class="bonos__thumb" src="img/bonus-01-mandamientos.webp" alt="Mockup del bono Los 10 Mandamientos Explicados" width="42" height="63" loading="lazy">
+          <div><h3>Los 10 Mandamientos Explicados</h3><p>Guía visual de cada mandamiento y su aplicación práctica hoy.</p></div>
+        </div>
         <div class="bonos__valor"><s>$17</s><strong>GRATIS</strong></div>
       </li>
       <li class="bonos__item">
