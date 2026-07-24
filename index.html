@@ -596,7 +596,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: #877;
     font-size: 12px;
     text-align: center;
-    padding: 28px 20px 100px;
+    padding: 28px 20px;
   }
   footer p { margin-bottom: 6px; color: #8A8398; }
   footer a { color: #B0A8C0; }
@@ -639,29 +639,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .notif-compra__icone { font-size: 18px; }
     .notif-compra__texto { font-size: 11.5px; }
   }
-
-  /* ============================================
-     BARRA CTA FIXA (mobile)
-  ============================================ */
-  .barra-fixa {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: #fff;
-    border-top: 1px solid var(--cor-borda);
-    padding: 10px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
-    transform: translateY(120%);
-    transition: transform 0.3s ease;
-    z-index: 999;
-  }
-  .barra-fixa.visivel { transform: translateY(0); }
-  .barra-fixa__preco { font-family: var(--fonte-titulo); font-weight: 800; color: var(--cor-secundaria); font-size: 18px; white-space: nowrap; }
-  .barra-fixa__preco small { display: block; font-size: 10px; font-weight: 500; color: #999; }
-  .barra-fixa .btn-cta { padding: 12px 18px; font-size: 13px; width: auto; }
 
   /* ============================================
      MODAL OFERTA DE SAÍDA (back-redirect)
@@ -731,8 +708,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .incluye__lista { max-width: 720px; }
     .autoridade__inner { display: flex; align-items: center; gap: 32px; text-align: left; }
     .autoridade__selo { margin: 0; flex-shrink: 0; }
-    .barra-fixa { max-width: 480px; left: 50%; transform: translate(-50%, 120%); border-radius: 14px 14px 0 0; }
-    .barra-fixa.visivel { transform: translate(-50%, 0); }
     .planos__grid { flex-direction: row; align-items: stretch; }
     .plano__card--completo { transform: translateY(-8px); }
     .depoimentos__grid { flex-direction: row; }
@@ -1155,12 +1130,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p class="disclaimer">Este sitio no está afiliado a Facebook/Meta ni a ninguna red social. Los resultados de estudio dependen de la constancia individual.</p>
 </footer>
 
-<!-- ====== BARRA CTA FIXA (MOBILE) ====== -->
-<div class="barra-fixa" id="barra-fixa">
-  <div class="barra-fixa__preco">Desde $9,90 <small>Precio de lanzamiento</small></div>
-  <a href="#oferta" class="btn-cta">Ver planes</a>
-</div>
-
 <!-- ====== MODAL OFERTA DE SAÍDA (back-redirect) ======
      Aparece 1x por sessão quando o lead tenta voltar/sair da página. -->
 <div class="modal-salida" id="modal-salida">
@@ -1323,21 +1292,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       resposta.style.maxHeight = resposta.scrollHeight + 40 + 'px';
     }
   }
-
-  // ============================================
-  // BARRA FIXA (mobile) — aparece após rolar a hero
-  // ============================================
-  const barraFixa = document.getElementById('barra-fixa');
-  const ofertaSecao = document.getElementById('oferta');
-  window.addEventListener('scroll', function () {
-    const scrollY = window.scrollY || window.pageYOffset;
-    const ofertaTop = ofertaSecao.offsetTop;
-    if (scrollY > 500 && scrollY < ofertaTop - 200) {
-      barraFixa.classList.add('visivel');
-    } else {
-      barraFixa.classList.remove('visivel');
-    }
-  });
 
   // ============================================
   // ANO ATUAL NO RODAPÉ
