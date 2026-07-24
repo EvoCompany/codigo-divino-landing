@@ -466,7 +466,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .depoimentos-marquee:hover .depoimentos-marquee__track { animation-play-state: paused; }
   .depoimentos-marquee .depoimento__print {
     flex-shrink: 0;
-    width: 230px;
+    width: min(calc((100vw - 100px) / 4), 460px);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--sombra-card);
@@ -993,19 +993,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="depoimentos-carousel__slide"><img src="img/depoimento-03-jose.webp" alt="Testimonio de WhatsApp de José Ricardo sobre Código Divino" loading="lazy"></div>
       <div class="depoimentos-carousel__slide"><img src="img/depoimento-04-carlos.webp" alt="Testimonio de WhatsApp del Pastor Carlos sobre Código Divino" loading="lazy"></div>
     </div>
+  </div>
 
-    <!-- Desktop -->
-    <div class="depoimentos-marquee">
-      <div class="depoimentos-marquee__track">
-        <div class="depoimento__print"><img src="img/depoimento-01-miguel.webp" alt="Testimonio de WhatsApp de Miguel Alvares sobre Código Divino" loading="lazy"></div>
-        <div class="depoimento__print"><img src="img/depoimento-02-andrea.webp" alt="Testimonio de WhatsApp de Andrea sobre Código Divino" loading="lazy"></div>
-        <div class="depoimento__print"><img src="img/depoimento-03-jose.webp" alt="Testimonio de WhatsApp de José Ricardo sobre Código Divino" loading="lazy"></div>
-        <div class="depoimento__print"><img src="img/depoimento-04-carlos.webp" alt="Testimonio de WhatsApp del Pastor Carlos sobre Código Divino" loading="lazy"></div>
-        <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-01-miguel.webp" alt="" loading="lazy"></div>
-        <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-02-andrea.webp" alt="" loading="lazy"></div>
-        <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-03-jose.webp" alt="" loading="lazy"></div>
-        <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-04-carlos.webp" alt="" loading="lazy"></div>
-      </div>
+  <!-- Desktop: fora do .container para ocupar quase toda a largura da tela -->
+  <div class="depoimentos-marquee">
+    <div class="depoimentos-marquee__track">
+      <div class="depoimento__print"><img src="img/depoimento-01-miguel.webp" alt="Testimonio de WhatsApp de Miguel Alvares sobre Código Divino" loading="lazy"></div>
+      <div class="depoimento__print"><img src="img/depoimento-02-andrea.webp" alt="Testimonio de WhatsApp de Andrea sobre Código Divino" loading="lazy"></div>
+      <div class="depoimento__print"><img src="img/depoimento-03-jose.webp" alt="Testimonio de WhatsApp de José Ricardo sobre Código Divino" loading="lazy"></div>
+      <div class="depoimento__print"><img src="img/depoimento-04-carlos.webp" alt="Testimonio de WhatsApp del Pastor Carlos sobre Código Divino" loading="lazy"></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-01-miguel.webp" alt="" loading="lazy"></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-02-andrea.webp" alt="" loading="lazy"></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-03-jose.webp" alt="" loading="lazy"></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-04-carlos.webp" alt="" loading="lazy"></div>
     </div>
   </div>
 </section>
