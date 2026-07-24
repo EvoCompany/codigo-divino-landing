@@ -421,36 +421,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .bonos__total s, .bonos__total s strong { color: #E63946; }
 
   /* ============================================
-     DEPOIMENTOS (carrossel de prints reales, 1 por vez)
+     DEPOIMENTOS — rolagem infinita (mobile e desktop)
   ============================================ */
-  .depoimentos-carousel {
-    position: relative;
-    width: 100%;
-    max-width: 300px;
-    aspect-ratio: 640 / 1205;
-    margin: 36px auto 0;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 14px 36px rgba(43,33,24,0.18);
-  }
-  .depoimentos-carousel__slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 0.7s ease;
-  }
-  .depoimentos-carousel__slide.ativo { opacity: 1; }
-  .depoimentos-carousel__slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  @media (min-width: 480px) {
-    .depoimentos-carousel { max-width: 340px; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .depoimentos-carousel__slide { transition: none; }
-  }
-
-  /* Desktop: rolagem infinita com os 4 prints */
   .depoimentos-marquee {
-    display: none;
     margin-top: 36px;
     overflow: hidden;
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
@@ -466,18 +439,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .depoimentos-marquee:hover .depoimentos-marquee__track { animation-play-state: paused; }
   .depoimentos-marquee .depoimento__print {
     flex-shrink: 0;
-    width: min(calc((100vw - 100px) / 4), 460px);
+    width: min(78vw, 320px);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--sombra-card);
   }
+  /* -10px = metade do gap (20px), necessário para o loop de -50% fechar
+     exatamente no início do 5º item (conjunto duplicado) sem deixar vão. */
   @keyframes depoimentosScroll {
     from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    to { transform: translateX(calc(-50% - 10px)); }
   }
   @media (min-width: 768px) {
-    .depoimentos-carousel { display: none; }
-    .depoimentos-marquee { display: block; }
+    .depoimentos-marquee .depoimento__print {
+      width: min(calc((100vw - 100px) / 4), 460px);
+    }
   }
   @media (prefers-reduced-motion: reduce) {
     .depoimentos-marquee__track { animation: none; }
@@ -981,21 +957,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ====== DEPOIMENTOS (mobile: 1 por vez / desktop: rolagem infinita) ====== -->
+<!-- ====== DEPOIMENTOS (rolagem infinita em mobile e desktop) ====== -->
 <section class="depoimentos">
   <div class="container">
     <h2 class="secao__titulo">Lo que dicen quienes ya lo están usando</h2>
-
-    <!-- Mobile/tablet -->
-    <div class="depoimentos-carousel" id="depoimentos-carousel">
-      <div class="depoimentos-carousel__slide ativo"><img src="img/depoimento-01-miguel.webp" alt="Testimonio de WhatsApp de Miguel Alvares sobre Código Divino" loading="lazy"></div>
-      <div class="depoimentos-carousel__slide"><img src="img/depoimento-02-andrea.webp" alt="Testimonio de WhatsApp de Andrea sobre Código Divino" loading="lazy"></div>
-      <div class="depoimentos-carousel__slide"><img src="img/depoimento-03-jose.webp" alt="Testimonio de WhatsApp de José Ricardo sobre Código Divino" loading="lazy"></div>
-      <div class="depoimentos-carousel__slide"><img src="img/depoimento-04-carlos.webp" alt="Testimonio de WhatsApp del Pastor Carlos sobre Código Divino" loading="lazy"></div>
-    </div>
   </div>
 
-  <!-- Desktop: fora do .container para ocupar quase toda a largura da tela -->
+  <!-- Fora do .container para ocupar quase toda a largura da tela -->
   <div class="depoimentos-marquee">
     <div class="depoimentos-marquee__track">
       <div class="depoimento__print"><img src="img/depoimento-01-miguel.webp" alt="Testimonio de WhatsApp de Miguel Alvares sobre Código Divino" loading="lazy"></div>
@@ -1298,25 +1266,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const el = document.getElementById('notif-compra');
     if (el && el.dataset.cerrado !== '1') mostrarNotificacaoCompra();
   }, 16000);
-
-  // ============================================
-  // CARROSSEL DE DEPOIMENTOS — alterna 1 print por vez
-  // ============================================
-  (function () {
-    const carrossel = document.getElementById('depoimentos-carousel');
-    if (!carrossel) return;
-    const slides = carrossel.querySelectorAll('.depoimentos-carousel__slide');
-    if (slides.length < 2) return;
-    const preferReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (preferReducedMotion) return;
-
-    let atual = 0;
-    setInterval(function () {
-      slides[atual].classList.remove('ativo');
-      atual = (atual + 1) % slides.length;
-      slides[atual].classList.add('ativo');
-    }, 4000);
-  })();
 
   // ============================================
   // FAQ ACCORDION
