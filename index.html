@@ -180,6 +180,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(201,162,39,0.45); }
   .btn-cta:active { transform: translateY(0); }
+  @keyframes btnPulso {
+    0%, 100% { box-shadow: 0 6px 20px rgba(201,162,39,0.35); transform: scale(1); }
+    50% { box-shadow: 0 6px 28px rgba(201,162,39,0.7); transform: scale(1.035); }
+  }
+  .btn-cta--pulsante { animation: btnPulso 1.8s ease-in-out infinite; }
+  .btn-cta--pulsante:hover { animation-play-state: paused; }
   .form-microcopy {
     font-size: 12.5px;
     color: var(--cor-texto-claro);
@@ -1046,7 +1052,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><span class="check">🎁</span> Devocionales de Poder — Refuerzo Diario</li>
         <li><span class="check">🎁</span> Manual de Interpretación Bíblica</li>
       </ul>
-      <a href="#" id="btn-comprar-completo" class="btn-cta">🔓 QUIERO EL PLAN COMPLETO</a>
+      <a href="#" id="btn-comprar-completo" class="btn-cta btn-cta--pulsante">🔓 QUIERO EL PLAN COMPLETO</a>
     </div>
   </div>
 
