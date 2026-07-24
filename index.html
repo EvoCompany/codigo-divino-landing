@@ -705,6 +705,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .modal-salida__titulo { font-size: clamp(22px, 5vw, 27px); font-weight: 800; color: var(--cor-secundaria); margin-bottom: 10px; }
   .modal-salida__texto { font-size: 14.5px; color: #4A3F30; margin-bottom: 16px; line-height: 1.6; }
   .modal-salida__texto strong { color: var(--cor-primaria-escura); }
+  .modal-salida__lista {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0 0 18px;
+    font-size: 12.5px;
+    color: #4A3F30;
+  }
+  .modal-salida__lista li { display: flex; align-items: flex-start; gap: 7px; }
+  .modal-salida__lista .check { color: #2E7D32; flex-shrink: 0; font-weight: 800; }
   .modal-salida__precos { display: flex; align-items: baseline; justify-content: center; gap: 12px; margin-bottom: 4px; }
   .modal-salida__precoAntes { font-size: 18px; color: #E63946; text-decoration: line-through; font-weight: 600; }
   .modal-salida__precoAgora { font-family: var(--fonte-titulo); font-size: 38px; font-weight: 800; color: var(--cor-secundaria); }
@@ -1163,7 +1174,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button class="modal-salida__fechar" onclick="cerrarOfertaSalida()" aria-label="Cerrar">×</button>
     <p class="modal-salida__icone">🙏</p>
     <h2 class="modal-salida__titulo">¡Espera un momento!</h2>
-    <p class="modal-salida__texto">Antes de irte, tenemos una última oferta solo para ti: lleva el <strong>Plan Completo</strong> (con los 6 bonos) al mismo precio del Plan Básico.</p>
+    <p class="modal-salida__texto">Antes de irte, tenemos una última oferta solo para ti: lleva el <strong>Plan Completo</strong> al mismo precio del Plan Básico. Esto es todo lo que recibes:</p>
+    <ul class="modal-salida__lista">
+      <li><span class="check">✓</span> Génesis Verso a Verso</li>
+      <li><span class="check">✓</span> Éxodo Explicado</li>
+      <li><span class="check">✓</span> Levítico Sin Complicaciones</li>
+      <li><span class="check">✓</span> Josué en Resúmenes Temáticos</li>
+      <li><span class="check">✓</span> Devocional Guiado de 30 Días</li>
+      <li><span class="check">🎁</span> Los 10 Mandamientos Explicados</li>
+      <li><span class="check">🎁</span> Milagros de Jesús Visualizados</li>
+      <li><span class="check">🎁</span> Historias Bíblicas para la Familia</li>
+      <li><span class="check">🎁</span> Devocionales de Poder: Refuerzo Diario</li>
+      <li><span class="check">🎁</span> Manual de Interpretación Bíblica</li>
+      <li><span class="check">🎁</span> Plan de Lectura Bíblica en 90 Días</li>
+    </ul>
     <div class="modal-salida__precos">
       <span class="modal-salida__precoAntes">$14,90</span>
       <span class="modal-salida__precoAgora">$9,90</span>
