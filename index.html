@@ -421,31 +421,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .bonos__total s, .bonos__total s strong { color: #E63946; }
 
   /* ============================================
-     DEPOIMENTOS
+     DEPOIMENTOS (carrossel de prints reales)
   ============================================ */
-  .depoimentos__grid { display: flex; flex-direction: column; gap: 16px; max-width: 640px; margin: 0 auto; }
-  .depoimento__card {
-    background: #fff;
+  .depoimentos-carousel {
+    overflow: hidden;
+    margin-top: 36px;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+  .depoimentos-carousel__track {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    width: max-content;
+    padding: 0 16px;
+    animation: depoimentosScroll 32s linear infinite;
+  }
+  .depoimentos-carousel:hover .depoimentos-carousel__track { animation-play-state: paused; }
+  .depoimento__print {
+    flex-shrink: 0;
+    width: 200px;
     border-radius: 16px;
-    padding: 20px;
+    overflow: hidden;
     box-shadow: var(--sombra-card);
   }
-  .depoimento__estrelas { color: var(--cor-primaria); font-size: 14px; margin-bottom: 8px; }
-  .depoimento__texto { font-size: 15px; font-style: italic; color: #4A3F30; margin-bottom: 12px; }
-  .depoimento__autor { display: flex; align-items: center; gap: 10px; }
-  .depoimento__avatar {
-    width: 38px; height: 38px; border-radius: 50%;
-    background: var(--cor-fundo-alt);
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 800; color: var(--cor-primaria-escura);
-    flex-shrink: 0;
+  @media (min-width: 480px) {
+    .depoimento__print { width: 230px; }
   }
-  .depoimento__nome { font-size: 13.5px; font-weight: 700; color: var(--cor-secundaria); }
-  .depoimento__local { font-size: 12px; color: #999; }
-  .depoimentos__aviso {
-    max-width: 640px; margin: 20px auto 0; text-align: center;
-    font-size: 12px; color: #A99; background: #FFF7F0; border: 1px dashed #E0B090;
-    border-radius: 8px; padding: 10px 14px;
+  @keyframes depoimentosScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .depoimentos-carousel__track { animation: none; }
   }
 
   /* ============================================
@@ -710,8 +718,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .autoridade__selo { margin: 0; flex-shrink: 0; }
     .planos__grid { flex-direction: row; align-items: stretch; }
     .plano__card--completo { transform: translateY(-8px); }
-    .depoimentos__grid { flex-direction: row; }
-    .depoimento__card { flex: 1; }
     .notif-compra { left: 24px; max-width: 280px; }
     .hero__mockup { max-width: 460px; }
   }
@@ -948,40 +954,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ====== DEPOIMENTOS ======
-     ATENÇÃO: substitua os cards abaixo por depoimentos REAIS de clientes
-     antes de publicar (nome, cidade, foto/print e frase autêntica).
-     Nunca publique depoimentos fabricados apresentados como reais. -->
+<!-- ====== DEPOIMENTOS (carrossel de prints reales de WhatsApp) ====== -->
 <section class="depoimentos">
   <div class="container">
     <h2 class="secao__titulo">Lo que dicen quienes ya lo están usando</h2>
-    <div class="depoimentos__grid">
-      <div class="depoimento__card">
-        <div class="depoimento__estrelas">★★★★★</div>
-        <p class="depoimento__texto">"[Espacio reservado para un depoimento real de cliente]"</p>
-        <div class="depoimento__autor">
-          <span class="depoimento__avatar">?</span>
-          <div><div class="depoimento__nome">[Nombre del cliente]</div><div class="depoimento__local">[Ciudad, país]</div></div>
-        </div>
-      </div>
-      <div class="depoimento__card">
-        <div class="depoimento__estrelas">★★★★★</div>
-        <p class="depoimento__texto">"[Espacio reservado para un depoimento real de cliente]"</p>
-        <div class="depoimento__autor">
-          <span class="depoimento__avatar">?</span>
-          <div><div class="depoimento__nome">[Nombre del cliente]</div><div class="depoimento__local">[Ciudad, país]</div></div>
-        </div>
-      </div>
-      <div class="depoimento__card">
-        <div class="depoimento__estrelas">★★★★★</div>
-        <p class="depoimento__texto">"[Espacio reservado para un depoimento real de cliente]"</p>
-        <div class="depoimento__autor">
-          <span class="depoimento__avatar">?</span>
-          <div><div class="depoimento__nome">[Nombre del cliente]</div><div class="depoimento__local">[Ciudad, país]</div></div>
-        </div>
-      </div>
+  </div>
+  <div class="depoimentos-carousel">
+    <div class="depoimentos-carousel__track">
+      <div class="depoimento__print"><img src="img/depoimento-01-miguel.webp" alt="Testimonio de WhatsApp de Miguel Alvares sobre Código Divino" loading="lazy"></div>
+      <div class="depoimento__print"><img src="img/depoimento-02-andrea.webp" alt="Testimonio de WhatsApp de Andrea sobre Código Divino" loading="lazy"></div>
+      <div class="depoimento__print"><img src="img/depoimento-03-jose.webp" alt="Testimonio de WhatsApp de José Ricardo sobre Código Divino" loading="lazy"></div>
+      <div class="depoimento__print"><img src="img/depoimento-04-carlos.webp" alt="Testimonio de WhatsApp del Pastor Carlos sobre Código Divino" loading="lazy"></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-01-miguel.webp" alt="" loading="lazy"></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-02-andrea.webp" alt="" loading="lazy"></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-03-jose.webp" alt="" loading="lazy"></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-04-carlos.webp" alt="" loading="lazy"></div>
     </div>
-    <p class="depoimentos__aviso">⚠️ Sección de ejemplo: reemplaza estos 3 cards por depoimentos reales de tus clientes (nombre, ciudad y print de conversación, si es posible) antes de publicar la página.</p>
   </div>
 </section>
 
