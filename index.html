@@ -346,7 +346,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      BÔNUS
   ============================================ */
   .bonos__intro { text-align: center; max-width: 560px; margin: 0 auto 32px; font-size: 16px; }
-  .bonos__lista { display: flex; flex-direction: column; gap: 14px; max-width: 640px; margin: 0 auto; }
+  .bonos__lista {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+    gap: 12px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
   .bonos__item {
     display: flex;
     align-items: center;
@@ -364,19 +371,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     flex-shrink: 0;
     width: 34px;
   }
-  .bonos__item h3 { font-size: 15.5px; color: var(--cor-secundaria); margin-bottom: 3px; }
-  .bonos__item p { font-size: 13.5px; color: #6B5F49; }
+  .bonos__item h3 { font-size: 14px; color: var(--cor-secundaria); margin-bottom: 3px; }
+  .bonos__item p { font-size: 12.5px; color: #6B5F49; }
   .bonos__valor { margin-left: auto; text-align: right; flex-shrink: 0; }
   .bonos__item--destaque {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 22px 18px 18px;
+    padding: 16px 10px 14px;
     gap: 4px;
+    height: 100%;
   }
   .bonos__destaque-img { position: relative; margin-bottom: 10px; }
   .bonos__thumb {
-    width: 150px;
+    width: 110px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 10px 24px rgba(0,0,0,0.15);
@@ -392,8 +400,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: flex; align-items: center; justify-content: center;
     font-size: 14px;
   }
-  .bonos__item--destaque .bonos__valor { margin: 6px 0 0; text-align: center; }
+  .bonos__item--destaque .bonos__conteudo-texto { display: flex; flex-direction: column; align-items: center; flex: 1; }
+  .bonos__item--destaque .bonos__valor { margin: 6px 0 0 0; text-align: center; margin-top: auto; }
   @media (min-width: 480px) {
+    .bonos__item h3 { font-size: 15.5px; }
+    .bonos__item p { font-size: 13.5px; }
+    .bonos__item--destaque { padding: 22px 18px 18px; }
     .bonos__thumb { width: 170px; }
   }
   @media (min-width: 768px) {
