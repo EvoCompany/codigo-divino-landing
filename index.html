@@ -421,39 +421,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .bonos__total s, .bonos__total s strong { color: #E63946; }
 
   /* ============================================
-     DEPOIMENTOS (carrossel de prints reales)
+     DEPOIMENTOS (carrossel de prints reales, 1 por vez)
   ============================================ */
   .depoimentos-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 640 / 1205;
+    margin: 36px auto 0;
+    border-radius: 20px;
     overflow: hidden;
-    margin-top: 36px;
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    box-shadow: 0 14px 36px rgba(43,33,24,0.18);
   }
-  .depoimentos-carousel__track {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    width: max-content;
-    padding: 0 16px;
-    animation: depoimentosScroll 32s linear infinite;
+  .depoimentos-carousel__slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease;
   }
-  .depoimentos-carousel:hover .depoimentos-carousel__track { animation-play-state: paused; }
-  .depoimento__print {
-    flex-shrink: 0;
-    width: 200px;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: var(--sombra-card);
-  }
+  .depoimentos-carousel__slide.ativo { opacity: 1; }
+  .depoimentos-carousel__slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
   @media (min-width: 480px) {
-    .depoimento__print { width: 230px; }
+    .depoimentos-carousel { max-width: 340px; }
   }
-  @keyframes depoimentosScroll {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+  @media (min-width: 768px) {
+    .depoimentos-carousel { max-width: 380px; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .depoimentos-carousel__track { animation: none; }
+    .depoimentos-carousel__slide { transition: none; }
   }
 
   /* ============================================
@@ -954,21 +949,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ====== DEPOIMENTOS (carrossel de prints reales de WhatsApp) ====== -->
+<!-- ====== DEPOIMENTOS (carrossel de prints reales de WhatsApp, 1 por vez) ====== -->
 <section class="depoimentos">
   <div class="container">
     <h2 class="secao__titulo">Lo que dicen quienes ya lo están usando</h2>
-  </div>
-  <div class="depoimentos-carousel">
-    <div class="depoimentos-carousel__track">
-      <div class="depoimento__print"><img src="img/depoimento-01-miguel.webp" alt="Testimonio de WhatsApp de Miguel Alvares sobre Código Divino" loading="lazy"></div>
-      <div class="depoimento__print"><img src="img/depoimento-02-andrea.webp" alt="Testimonio de WhatsApp de Andrea sobre Código Divino" loading="lazy"></div>
-      <div class="depoimento__print"><img src="img/depoimento-03-jose.webp" alt="Testimonio de WhatsApp de José Ricardo sobre Código Divino" loading="lazy"></div>
-      <div class="depoimento__print"><img src="img/depoimento-04-carlos.webp" alt="Testimonio de WhatsApp del Pastor Carlos sobre Código Divino" loading="lazy"></div>
-      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-01-miguel.webp" alt="" loading="lazy"></div>
-      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-02-andrea.webp" alt="" loading="lazy"></div>
-      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-03-jose.webp" alt="" loading="lazy"></div>
-      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-04-carlos.webp" alt="" loading="lazy"></div>
+    <div class="depoimentos-carousel" id="depoimentos-carousel">
+      <div class="depoimentos-carousel__slide ativo"><img src="img/depoimento-01-miguel.webp" alt="Testimonio de WhatsApp de Miguel Alvares sobre Código Divino" loading="lazy"></div>
+      <div class="depoimentos-carousel__slide"><img src="img/depoimento-02-andrea.webp" alt="Testimonio de WhatsApp de Andrea sobre Código Divino" loading="lazy"></div>
+      <div class="depoimentos-carousel__slide"><img src="img/depoimento-03-jose.webp" alt="Testimonio de WhatsApp de José Ricardo sobre Código Divino" loading="lazy"></div>
+      <div class="depoimentos-carousel__slide"><img src="img/depoimento-04-carlos.webp" alt="Testimonio de WhatsApp del Pastor Carlos sobre Código Divino" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -1261,6 +1250,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const el = document.getElementById('notif-compra');
     if (el && el.dataset.cerrado !== '1') mostrarNotificacaoCompra();
   }, 16000);
+
+  // ============================================
+  // CARROSSEL DE DEPOIMENTOS — alterna 1 print por vez
+  // ============================================
+  (function () {
+    const carrossel = document.getElementById('depoimentos-carousel');
+    if (!carrossel) return;
+    const slides = carrossel.querySelectorAll('.depoimentos-carousel__slide');
+    if (slides.length < 2) return;
+    const preferReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (preferReducedMotion) return;
+
+    let atual = 0;
+    setInterval(function () {
+      slides[atual].classList.remove('ativo');
+      atual = (atual + 1) % slides.length;
+      slides[atual].classList.add('ativo');
+    }, 4000);
+  })();
 
   // ============================================
   // FAQ ACCORDION
