@@ -382,7 +382,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .bonos__item--destaque .bonos__conteudo-texto { flex: 1; }
     .bonos__item--destaque .bonos__valor { margin: 0 0 0 auto; text-align: right; }
   }
-  .bonos__valor s { font-size: 12px; color: #999; }
+  .bonos__valor s { font-size: 12px; color: #E63946; text-decoration: underline; }
   .bonos__valor strong { display: block; font-size: 13px; color: #2E7D32; font-weight: 800; }
   .bonos__total {
     max-width: 640px;
@@ -395,6 +395,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     font-size: 16px;
   }
   .bonos__total strong { color: var(--cor-primaria); font-size: 22px; }
+  .bonos__total s { text-decoration: underline; }
+  .bonos__total s, .bonos__total s strong { color: #E63946; }
 
   /* ============================================
      DEPOIMENTOS
@@ -505,7 +507,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .plano__nombre { font-size: 19px; font-weight: 700; color: var(--cor-secundaria); margin-bottom: 4px; }
   .plano__desc { font-size: 13.5px; color: #8A7A5C; margin-bottom: 18px; }
   .plano__valor-total { font-size: 14px; color: #8A7A5C; margin-bottom: 4px; }
-  .plano__valor-total s { color: #B0A080; }
+  .plano__valor-total s { color: #E63946; text-decoration: underline; }
   .plano__preco { font-family: var(--fonte-titulo); font-size: clamp(36px, 8vw, 46px); font-weight: 800; color: var(--cor-secundaria); line-height: 1; }
   .plano__preco small { font-size: 16px; font-weight: 600; }
   .plano__parcelas { font-size: 12.5px; color: #8A7A5C; margin: 6px 0 20px; }
@@ -680,7 +682,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .modal-salida__texto { font-size: 14.5px; color: #4A3F30; margin-bottom: 16px; line-height: 1.6; }
   .modal-salida__texto strong { color: var(--cor-primaria-escura); }
   .modal-salida__precos { display: flex; align-items: baseline; justify-content: center; gap: 12px; margin-bottom: 4px; }
-  .modal-salida__precoAntes { font-size: 18px; color: #B0A080; text-decoration: line-through; }
+  .modal-salida__precoAntes { font-size: 18px; color: #E63946; text-decoration: underline; }
   .modal-salida__precoAgora { font-family: var(--fonte-titulo); font-size: 38px; font-weight: 800; color: var(--cor-secundaria); }
   .modal-salida__contador-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #B23A2E; font-weight: 700; margin: 10px 0 4px; }
   .modal-salida__contador {
@@ -766,7 +768,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </p>
 
     <a href="#oferta" class="btn-cta">✅ QUIERO ENTENDER LA BIBLIA HOY</a>
-    <p class="form-microcopy">🔒 Acceso inmediato · Pago 100% seguro · Garantía de 7 días</p>
+    <p class="form-microcopy">🔒 Acceso inmediato · Pago 100% seguro · Garantía de 30 días</p>
 
     <p class="hero__estrelas">★★★★★ <span>4.9/5 — más de 4.000 cristianos ya lo están usando</span></p>
     <p class="hero__preco-teaser">Precio de lanzamiento desde <strong>$9,90</strong></p>
@@ -785,7 +787,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="numero__label">calificación promedio</div>
     </div>
     <div>
-      <div class="numero__valor">7 días</div>
+      <div class="numero__valor">30 días</div>
       <div class="numero__label">de garantía total</div>
     </div>
   </div>
@@ -939,7 +941,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </li>
     </ul>
-    <div class="bonos__total">Valor total de los bonos: <strong>$77</strong> — incluidos hoy sin costo</div>
+    <div class="bonos__total"><s>Valor total de los bonos: <strong>$77</strong></s> — incluidos hoy sin costo</div>
   </div>
 </section>
 
@@ -1009,7 +1011,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="plano__card">
       <p class="plano__nombre">📘 Plan Básico</p>
       <p class="plano__desc">Solo el Método V.E.R. completo</p>
-      <p class="plano__valor-total">Valor: <s>$67</s></p>
+      <p class="plano__valor-total"><s>Valor: $67</s></p>
       <p class="plano__preco"><small>$</small>9,90</p>
       <p class="plano__parcelas">Pago único · en tu moneda local</p>
       <ul class="plano__lista">
@@ -1028,7 +1030,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="plano__ribbon">⭐ Más elegido</span>
       <p class="plano__nombre">🎁 Plan Completo</p>
       <p class="plano__desc">Método V.E.R. + 5 bonos exclusivos</p>
-      <p class="plano__valor-total">Valor total: <s>$144</s></p>
+      <p class="plano__valor-total"><s>Valor total: $144</s></p>
       <p class="plano__preco"><small>$</small>14,90</p>
       <p class="plano__parcelas">Pago único · en tu moneda local</p>
       <ul class="plano__lista">
@@ -1050,16 +1052,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span>🏦 Transferencia</span>
     <span>📱 Billeteras digitales</span>
   </div>
-  <p class="oferta__garantia-mini">🛡️ Garantía incondicional de 7 días en ambos planes</p>
+  <p class="oferta__garantia-mini">🛡️ Garantía incondicional de 30 días en ambos planes</p>
 </section>
 
 <!-- ====== GARANTIA ====== -->
 <section class="garantia" id="garantia">
   <div class="container">
     <div class="garantia__selo">🛡️</div>
-    <h2 class="secao__titulo">Garantía de 7 días, sin preguntas</h2>
+    <h2 class="secao__titulo">Garantía de 30 días, sin preguntas</h2>
     <p class="garantia__texto">
-      Si dentro de los próximos <strong>7 días</strong> sientes que Código Divino no es para ti, te devolvemos el <strong>100% de tu inversión</strong>. Sin condiciones, sin preguntas incómodas. El riesgo es todo nuestro.
+      Si dentro de los próximos <strong>30 días</strong> sientes que Código Divino no es para ti, te devolvemos el <strong>100% de tu inversión</strong>. Sin condiciones, sin preguntas incómodas. El riesgo es todo nuestro.
     </p>
   </div>
 </section>
@@ -1091,7 +1093,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="faq__item">
         <button class="faq__pergunta" onclick="toggleFaq(this)">¿Qué pasa si no me gusta? <span class="icone">+</span></button>
-        <div class="faq__resposta"><p>Tienes 7 días de garantía incondicional. Si no te sirve, te devolvemos el 100% de tu dinero, sin preguntas.</p></div>
+        <div class="faq__resposta"><p>Tienes 30 días de garantía incondicional. Si no te sirve, te devolvemos el 100% de tu dinero, sin preguntas.</p></div>
       </div>
       <div class="faq__item">
         <button class="faq__pergunta" onclick="toggleFaq(this)">¿En qué moneda se cobra? <span class="icone">+</span></button>
@@ -1105,7 +1107,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="cta-final">
   <div class="container">
     <h2 class="cta-final__titulo">Tu Biblia está esperando que la entiendas de verdad</h2>
-    <p class="cta-final__sub">Elige tu plan y empieza hoy con el Método V.E.R., con garantía de 7 días.</p>
+    <p class="cta-final__sub">Elige tu plan y empieza hoy con el Método V.E.R., con garantía de 30 días.</p>
     <a href="#oferta" class="btn-cta">✅ QUIERO EMPEZAR AHORA</a>
   </div>
 </section>
