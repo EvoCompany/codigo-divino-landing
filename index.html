@@ -1408,8 +1408,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }, 1000);
     }
 
+    // Clicar em qualquer link/botão da própria página é o lead ENGAJANDO,
+    // não tentando sair — mesmo que isso dispare popstate/hashchange ou um
+    // toque com leve arrasto seja mal interpretado como swipe-back. Por
+    // ~1s após esse clique, ignoramos qualquer gatilho de saída.
+    let cliqueInternoRecente = false;
+    let cliqueInternoTimer = null;
+    document.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('a, button')) {
+        cliqueInternoRecente = true;
+        clearTimeout(cliqueInternoTimer);
+        cliqueInternoTimer = setTimeout(function () { cliqueInternoRecente = false; }, 1000);
+      }
+    }, true);
+
     window.mostrarOfertaSalida = function () {
-      if (jaMostrou()) return;
+      if (jaMostrou() || cliqueInternoRecente) return;
       const modal = document.getElementById('modal-salida');
       if (!modal) return;
       modal.classList.add('visivel');
@@ -1450,7 +1464,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     document.addEventListener('touchstart', function (e) {
       const toque = e.touches && e.touches[0];
-      if (toque && toque.clientX <= 20) {
+      const alvoInterativo = e.target.closest && e.target.closest('a, button');
+      if (toque && toque.clientX <= 20 && !alvoInterativo) {
         toqueInicioX = toque.clientX;
         toqueInicioY = toque.clientY;
       } else {
