@@ -56,16 +56,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      VARIÁVEIS — edite aqui para customizar cores
   ============================================ */
   :root {
-    --cor-primaria: #C9A227;        /* dourado — CTA e destaques */
-    --cor-primaria-escura: #9C7C1A;
-    --cor-secundaria: #14102B;      /* azul-violeta profundo — hero, autoridade, oferta */
-    --cor-secundaria-2: #1F1A3D;
+    --cor-primaria: #C9A84C;        /* dourado — CTA e destaques */
+    --cor-primaria-escura: #8B6914;
+    --cor-secundaria: #1A0F00;      /* marrom quase preto — hero, autoridade, oferta */
+    --cor-secundaria-2: #3D2100;
     --cor-texto: #FFFFFF;
-    --cor-texto-claro: #E8E1CE;
-    --cor-fundo: #FBF6EA;           /* pergaminho/creme — fundo geral */
-    --cor-fundo-alt: #F3EAD4;
-    --cor-corpo: #2B2118;           /* marrom escuro — texto sobre fundo claro */
-    --cor-borda: #E3D6B4;
+    --cor-texto-claro: #F5E9C8;
+    --cor-fundo: #F5E9C8;           /* pergaminho/creme — fundo geral */
+    --cor-fundo-alt: #E8D4A0;
+    --cor-corpo: #3D2100;           /* marrom escuro — texto sobre fundo claro */
+    --cor-borda: #E8D4A0;
     --sombra-card: 0 4px 18px rgba(43, 33, 24, 0.08);
     --fonte-titulo: 'Poppins', sans-serif;   /* arredondada e amigável, sem formalidade excessiva */
     --fonte-corpo: 'Nunito', sans-serif;      /* alta legibilidade, terminações suaves */
@@ -126,7 +126,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .hero__badge {
     display: inline-block;
-    background: rgba(201,162,39,0.15);
+    background: rgba(201,168,76,0.15);
     border: 1px solid var(--cor-primaria);
     color: var(--cor-primaria);
     font-size: 12px;
@@ -175,14 +175,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     border: none;
     border-radius: 14px;
     cursor: pointer;
-    box-shadow: 0 6px 20px rgba(201,162,39,0.35);
+    box-shadow: 0 6px 20px rgba(201,168,76,0.35);
     transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
   }
-  .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(201,162,39,0.45); }
+  .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 26px rgba(201,168,76,0.45); }
   .btn-cta:active { transform: translateY(0); }
   @keyframes btnPulso {
-    0%, 100% { box-shadow: 0 6px 20px rgba(201,162,39,0.35); transform: scale(1); }
-    50% { box-shadow: 0 6px 28px rgba(201,162,39,0.7); transform: scale(1.035); }
+    0%, 100% { box-shadow: 0 6px 20px rgba(201,168,76,0.35); transform: scale(1); }
+    50% { box-shadow: 0 6px 28px rgba(201,168,76,0.7); transform: scale(1.035); }
   }
   .btn-cta--pulsante { animation: btnPulso 1.8s ease-in-out infinite; }
   .btn-cta--pulsante:hover { animation-play-state: paused; }
@@ -267,7 +267,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .metodo__grid { display: flex; flex-direction: column; gap: 18px; max-width: 640px; margin: 0 auto; }
   .metodo__card {
     background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(201,162,39,0.3);
+    border: 1px solid rgba(201,168,76,0.3);
     border-radius: 18px;
     padding: 24px;
   }
@@ -440,7 +440,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .autoridade__inner { max-width: 620px; margin: 0 auto; text-align: center; }
   .autoridade__selo {
     width: 84px; height: 84px; border-radius: 50%;
-    background: rgba(201,162,39,0.15);
+    background: rgba(201,168,76,0.15);
     border: 2px solid var(--cor-primaria);
     display: flex; align-items: center; justify-content: center;
     font-size: 34px;
@@ -498,7 +498,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .plano__card--completo {
     border: 2px solid var(--cor-primaria);
-    box-shadow: 0 12px 40px rgba(201,162,39,0.28);
+    box-shadow: 0 12px 40px rgba(201,168,76,0.28);
   }
   .plano__ribbon {
     position: absolute;
@@ -508,7 +508,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     color: #1A1409;
     font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;
     padding: 7px 18px; border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(201,162,39,0.4);
+    box-shadow: 0 4px 12px rgba(201,168,76,0.4);
     white-space: nowrap;
   }
   .plano__nombre { font-size: 19px; font-weight: 700; color: var(--cor-secundaria); margin-bottom: 4px; }
