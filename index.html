@@ -440,6 +440,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     overflow: hidden;
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
     mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
   }
   .depoimentos-marquee__track {
     display: flex;
@@ -448,7 +452,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     width: max-content;
     animation: depoimentosScroll 56s linear infinite;
   }
-  .depoimentos-marquee:hover .depoimentos-marquee__track { animation-play-state: paused; }
   .depoimentos-marquee .depoimento__print {
     flex-shrink: 0;
     width: min(78vw, 320px);
@@ -456,6 +459,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     overflow: hidden;
     box-shadow: var(--sombra-card);
   }
+  .depoimentos-marquee .depoimento__print img { -webkit-user-drag: none; pointer-events: none; }
   /* -10px = metade do gap (20px), necessário para o loop de -50% fechar
      exatamente no início do 5º item (conjunto duplicado) sem deixar vão. */
   @keyframes depoimentosScroll {
@@ -466,6 +470,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .depoimentos-marquee .depoimento__print {
       width: min(calc((100vw - 100px) / 4), 460px);
     }
+  }
+  /* Pausa no hover só em dispositivos com mouse de verdade: em touch, o
+     :hover fica "preso" ao toque e travaria a rolagem para os leads no mobile. */
+  @media (hover: hover) and (pointer: fine) {
+    .depoimentos-marquee:hover .depoimentos-marquee__track { animation-play-state: paused; }
+  }
+  /* Deixa a área imune ao toque no mobile/tablet: dedos passando por cima
+     não pausam, não selecionam texto nem arrastam as imagens. */
+  @media (hover: none), (pointer: coarse) {
+    .depoimentos-marquee { pointer-events: none; }
   }
   @media (prefers-reduced-motion: reduce) {
     .depoimentos-marquee__track { animation: none; }
