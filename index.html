@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="pt-BR"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Código Divino: Entiende la Biblia de Principio a Fin | Estudio Bíblico Visual</title>
+<title>Código Divino: Entenda a Bíblia do Início ao Fim | Estudo Bíblico Visual</title>
 
 <!-- SEO & Open Graph (preview en WhatsApp / Facebook) -->
-<meta name="description" content="El sistema visual de 3 pasos que le da claridad bíblica a miles de cristianos. Entiende la Biblia de principio a fin en solo 15 minutos al día.">
+<meta name="description" content="O sistema visual de 3 passos que traz clareza bíblica a milhares de cristãos. Entenda a Bíblia do início ao fim em apenas 15 minutos por dia.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://codigodivinoano.com/">
-<meta property="og:title" content="Código Divino: Entiende la Biblia de Principio a Fin">
-<meta property="og:description" content="El sistema visual de 3 pasos que le da claridad bíblica a miles de cristianos en toda Latinoamérica.">
+<meta property="og:title" content="Código Divino: Entenda a Bíblia do Início ao Fim">
+<meta property="og:description" content="O sistema visual de 3 passos que traz clareza bíblica a milhares de cristãos em toda a América Latina.">
 <!-- TODO: trocar por uma imagem real 1200x630px (mockup do produto) -->
 <meta property="og:image" content="https://codigodivinoano.com/og-image.jpg">
 <meta property="og:url" content="https://codigodivinoano.com/">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="es_LA">
+<meta property="og:locale" content="pt_BR">
 
 <!-- Favicon (emoji inline, sem dependência externa) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%96%3C/text%3E%3C/svg%3E">
 
 <!-- Google Fonts — Poppins (títulos) + Nunito (corpo): combinação arredondada e amigável -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&amp;family=Nunito:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
 
 <!-- ============================================
      META PIXEL — troque SEU_PIXEL_ID pelo ID real
@@ -41,6 +40,13 @@
   <img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/>
 </noscript>
+
+<!-- Tradução dos depoimentos -->
+<style>.depoimento__traducao{margin-top:10px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:10px 12px;text-align:left;white-space:normal}
+.depoimento__traducao-label{display:block;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#a07d2c;margin-bottom:4px}
+.depoimento__traducao p{margin:0;font-size:12px;line-height:1.45;color:#3a2e1f}
+</style>
+
 
 <!-- ============================================
      GOOGLE TAG MANAGER — troque GTM-XXXXXXX pelo ID real
@@ -800,14 +806,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <body>
 
 <!-- GTM noscript -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ====== BARRA DE URGÊNCIA ====== -->
 <div class="barra-urgencia">
-  <p class="barra-urgencia__titulo">🔥 OFERTA POR TIEMPO LIMITADO 🔥</p>
-  <p class="barra-urgencia__sub">¡Aprovecha antes de que suba el precio!</p>
-  <p class="barra-urgencia__nota">Acceso inmediato tras el pago</p>
+  <p class="barra-urgencia__titulo">🔥 OFERTA POR TEMPO LIMITADO 🔥</p>
+  <p class="barra-urgencia__sub">Aproveite antes que o preço suba!</p>
+  <p class="barra-urgencia__nota">Acesso imediato após o pagamento</p>
 </div>
 
 <!-- ====== NOTIFICAÇÃO DE COMPRA (prova social simulada) ======
@@ -815,32 +820,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      Substitua por dados reais (via webhook da plataforma de pagamento) assim que
      houver volume suficiente de vendas. -->
 <div class="notif-compra" id="notif-compra">
-  <button class="notif-compra__fechar" onclick="fecharNotificacao()" aria-label="Cerrar">×</button>
+  <button class="notif-compra__fechar" onclick="fecharNotificacao()" aria-label="Fechar">×</button>
   <span class="notif-compra__icone">🛒</span>
   <span class="notif-compra__texto">
-    <strong id="notif-nombre">María</strong> de <span id="notif-ciudad">Bogotá</span> acaba de comprar Código Divino<br>
-    <span class="notif-compra__tiempo" id="notif-tiempo">hace 2 minutos</span>
+    <strong id="notif-nombre">María</strong> de <span id="notif-ciudad">Bogotá</span> acabou de comprar o Código Divino<br>
+    <span class="notif-compra__tiempo" id="notif-tiempo">há 2 minutos</span>
   </span>
 </div>
 
 <!-- ====== HERO ====== -->
 <section class="hero">
   <div class="hero__container">
-    <img class="hero__mockup" src="img/mockup-hero.webp" alt="Código Divino: mockup con todos los módulos y los 6 bonos incluidos" width="240" height="192" fetchpriority="high">
+    <img class="hero__mockup" src="img/mockup-hero.webp" alt="Código Divino: mockup com todos os módulos e os 6 bônus incluídos" width="240" height="192" fetchpriority="high">
 
-    <span class="hero__badge">✝️ Estudio Bíblico Visual</span>
+    <span class="hero__badge">✝️ Estudo Bíblico Visual</span>
     <h1 class="hero__headline">
-      Entiende la Biblia de Principio a Fin en Solo <span>15 Minutos al Día</span>
+      Entenda a Bíblia do Início ao Fim em Apenas <span>15 Minutos por Dia</span>
     </h1>
     <p class="hero__subheadline">
-      El sistema visual y guiado que le está devolviendo la claridad bíblica a miles de cristianos en toda Latinoamérica. Sin seminario. Sin años de estudio. Sin frustración.
+      O sistema visual e guiado que está devolvendo a clareza bíblica a milhares de cristãos em toda a América Latina. Sem seminário. Sem anos de estudo. Sem frustração.
     </p>
 
-    <a href="#oferta" class="btn-cta">✅ QUIERO ENTENDER LA BIBLIA HOY</a>
-    <p class="form-microcopy">🔒 Acceso inmediato · Pago 100% seguro · Garantía de 30 días</p>
+    <a href="#oferta" class="btn-cta">✅ QUERO ENTENDER A BÍBLIA HOJE</a>
+    <p class="form-microcopy">🔒 Acesso imediato · Pagamento 100% seguro · Garantia de 30 dias</p>
 
-    <p class="hero__estrelas">★★★★★ <span>4.9/5, más de 4.000 cristianos ya lo están usando</span></p>
-    <p class="hero__preco-teaser">Precio de lanzamiento desde <strong>$9,90</strong></p>
+    <p class="hero__estrelas">★★★★★ <span>4.9/5, mais de 4.000 cristãos já estão usando</span></p>
+    <p class="hero__preco-teaser">Preço de lançamento a partir de <strong>R$9,90</strong></p>
   </div>
 </section>
 
@@ -849,15 +854,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="prova-social__numeros">
     <div>
       <div class="numero__valor">+4.000</div>
-      <div class="numero__label">cristianos ya lo usan</div>
+      <div class="numero__label">cristãos já usam</div>
     </div>
     <div>
       <div class="numero__valor">4.9★</div>
-      <div class="numero__label">calificación promedio</div>
+      <div class="numero__label">avaliação média</div>
     </div>
     <div>
-      <div class="numero__valor">30 días</div>
-      <div class="numero__label">de garantía total</div>
+      <div class="numero__valor">30 dias</div>
+      <div class="numero__label">de garantia total</div>
     </div>
   </div>
 </section>
@@ -865,39 +870,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ====== PROBLEMA / AGITAÇÃO ====== -->
 <section class="problema">
   <div class="container">
-    <h2 class="secao__titulo">¿Te suena familiar?</h2>
-    <p class="secao__subtitulo">No estás solo. Esto le pasa a la mayoría de los cristianos que intentan estudiar la Biblia por su cuenta.</p>
+    <h2 class="secao__titulo">Isso parece familiar?</h2>
+    <p class="secao__subtitulo">Você não está sozinho. Isso acontece com a maioria dos cristãos que tentam estudar a Bíblia por conta própria.</p>
     <ul class="problema__lista">
-      <li class="problema__item"><span class="problema__icone">✕</span> Abres la Biblia con buenas intenciones... y la cierras 10 minutos después sin entender nada.</li>
-      <li class="problema__item"><span class="problema__icone">✕</span> Lees el mismo capítulo dos o tres veces y sigues sin saber qué te quiere decir Dios.</li>
-      <li class="problema__item"><span class="problema__icone">✕</span> Sientes que todos a tu alrededor "entienden" la Palabra menos tú.</li>
-      <li class="problema__item"><span class="problema__icone">✕</span> Empezaste un plan de lectura hace meses... y ya no recuerdas ni en qué libro ibas.</li>
-      <li class="problema__item"><span class="problema__icone">✕</span> Te da vergüenza preguntar en tu grupo de estudio porque sientes que deberías saber más.</li>
+      <li class="problema__item"><span class="problema__icone">✕</span> Você abre a Bíblia com boas intenções... e a fecha 10 minutos depois sem entender nada.</li>
+      <li class="problema__item"><span class="problema__icone">✕</span> Lê o mesmo capítulo duas ou três vezes e continua sem saber o que Deus quer te dizer.</li>
+      <li class="problema__item"><span class="problema__icone">✕</span> Sente que todos ao seu redor "entendem" a Palavra, menos você.</li>
+      <li class="problema__item"><span class="problema__icone">✕</span> Começou um plano de leitura há meses... e já nem lembra em que livro parou.</li>
+      <li class="problema__item"><span class="problema__icone">✕</span> Tem vergonha de perguntar no seu grupo de estudo porque sente que deveria saber mais.</li>
     </ul>
-    <p class="problema__conclusao">No es falta de fe. Es falta de un método visual que te guíe paso a paso.</p>
+    <p class="problema__conclusao">Não é falta de fé. É falta de um método visual que te guie passo a passo.</p>
   </div>
 </section>
 
 <!-- ====== MÉTODO / SOLUÇÃO ====== -->
 <section class="metodo">
   <div class="container">
-    <h2 class="secao__titulo">Presentamos el Método V.E.R.</h2>
-    <p class="secao__subtitulo">Un sistema de 3 pasos que transforma capítulos densos de la Biblia en mapas claros que tu mente puede retener. Así estudian quienes usan Código Divino.</p>
+    <h2 class="secao__titulo">Apresentamos o Método V.E.R.</h2>
+    <p class="secao__subtitulo">Um sistema de 3 passos que transforma capítulos densos da Bíblia em mapas claros que sua mente consegue reter. É assim que estudam aqueles que usam o Código Divino.</p>
     <div class="metodo__grid">
       <div class="metodo__card">
         <span class="metodo__letra">V</span>
         <h3>VER</h3>
-        <p>Visualiza cada libro con mapas, líneas de tiempo e ilustraciones que muestran de un vistazo qué está pasando y por qué importa.</p>
+        <p>Visualize cada livro com mapas, linhas do tempo e ilustrações que mostram, num piscar de olhos, o que está acontecendo e por que isso importa.</p>
       </div>
       <div class="metodo__card">
         <span class="metodo__letra">E</span>
         <h3>ENTENDER</h3>
-        <p>Explicaciones verso a verso en lenguaje simple, sin tecnicismos teológicos que te hagan sentir perdido.</p>
+        <p>Explicações versículo por versículo em linguagem simples, sem termos teológicos técnicos que te deixem perdido.</p>
       </div>
       <div class="metodo__card">
         <span class="metodo__letra">R</span>
-        <h3>RETENER</h3>
-        <p>Guías devocionales y preguntas de aplicación que fijan lo aprendido en tu vida diaria, no solo en tu memoria.</p>
+        <h3>RETER</h3>
+        <p>Guias devocionais e perguntas de aplicação que fixam o que você aprendeu na sua vida diária, não só na sua memória.</p>
       </div>
     </div>
   </div>
@@ -906,28 +911,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ====== O QUE INCLUI ====== -->
 <section class="incluye" id="incluye">
   <div class="container">
-    <h2 class="secao__titulo">Lo que vas a recibir hoy</h2>
-    <p class="secao__subtitulo">Contenido creado para que empieces a estudiar hoy mismo, sin importar tu nivel actual.</p>
+    <h2 class="secao__titulo">O que você vai receber hoje</h2>
+    <p class="secao__subtitulo">Conteúdo criado para você começar a estudar hoje mesmo, não importa o seu nível atual.</p>
     <ul class="incluye__lista">
       <li class="incluye__item">
         <span class="incluye__icone">📖</span>
-        <div><h3>Génesis Verso a Verso</h3><p>Comprende el origen de todo, desde la creación hasta José, sin perderte en nombres y genealogías.</p></div>
+        <div><h3>Gênesis Versículo por Versículo</h3><p>Compreenda a origem de tudo, da criação até José, sem se perder em nomes e genealogias.</p></div>
       </li>
       <li class="incluye__item">
         <span class="incluye__icone">🌊</span>
-        <div><h3>Éxodo Explicado</h3><p>Entiende el llamado de Moisés y la salida de Egipto como una historia que también habla de tu propia liberación.</p></div>
+        <div><h3>Êxodo Explicado</h3><p>Entenda o chamado de Moisés e a saída do Egito como uma história que também fala da sua própria libertação.</p></div>
       </li>
       <li class="incluye__item">
         <span class="incluye__icone">⛪</span>
-        <div><h3>Levítico Sin Complicaciones</h3><p>La guía espiritual que simplifica el libro que más cristianos abandonan a mitad de camino.</p></div>
+        <div><h3>Levítico Sem Complicações</h3><p>O guia espiritual que simplifica o livro que mais cristãos abandonam no meio do caminho.</p></div>
       </li>
       <li class="incluye__item">
         <span class="incluye__icone">🗺️</span>
-        <div><h3>Josué en Resúmenes Temáticos</h3><p>Mapas y resúmenes visuales de la conquista de la Tierra Prometida, fáciles de repasar.</p></div>
+        <div><h3>Josué em Resumos Temáticos</h3><p>Mapas e resumos visuais da conquista da Terra Prometida, fáceis de revisar.</p></div>
       </li>
       <li class="incluye__item">
         <span class="incluye__icone">🙏</span>
-        <div><h3>Devocional Guiado de 30 Días</h3><p>Un hábito diario de estudio que se adapta a los 15 minutos que ya tienes disponibles.</p></div>
+        <div><h3>Devocional Guiado de 30 Dias</h3><p>Um hábito diário de estudo que se adapta aos 15 minutos que você já tem disponíveis.</p></div>
       </li>
     </ul>
   </div>
@@ -936,14 +941,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ====== PARA QUEM ====== -->
 <section class="paraquem">
   <div class="container">
-    <h2 class="secao__titulo">¿Para quién es Código Divino?</h2>
+    <h2 class="secao__titulo">Para quem é o Código Divino?</h2>
     <div class="paraquem__grid">
-      <div class="paraquem__card"><div class="paraquem__icone">🎓</div><p>Pastores y líderes que buscan material visual para enseñar</p></div>
-      <div class="paraquem__card"><div class="paraquem__icone">🌱</div><p>Nuevos creyentes que quieren empezar con el pie derecho</p></div>
-      <div class="paraquem__card"><div class="paraquem__icone">👨‍👩‍👧‍👦</div><p>Familias que desean estudiar la Palabra juntas</p></div>
-      <div class="paraquem__card"><div class="paraquem__icone">🔥</div><p>Líderes de célula que necesitan contenido listo para compartir</p></div>
-      <div class="paraquem__card"><div class="paraquem__icone">📚</div><p>Cristianos cansados de leer sin entender</p></div>
-      <div class="paraquem__card"><div class="paraquem__icone">⏱️</div><p>Quienes tienen poco tiempo pero quieren avanzar de verdad</p></div>
+      <div class="paraquem__card"><div class="paraquem__icone">🎓</div><p>Pastores e líderes que buscam material visual para ensinar</p></div>
+      <div class="paraquem__card"><div class="paraquem__icone">🌱</div><p>Novos convertidos que querem começar com o pé direito</p></div>
+      <div class="paraquem__card"><div class="paraquem__icone">👨‍👩‍👧‍👦</div><p>Famílias que desejam estudar a Palavra juntas</p></div>
+      <div class="paraquem__card"><div class="paraquem__icone">🔥</div><p>Líderes de célula que precisam de conteúdo pronto para compartilhar</p></div>
+      <div class="paraquem__card"><div class="paraquem__icone">📚</div><p>Cristãos cansados de ler sem entender</p></div>
+      <div class="paraquem__card"><div class="paraquem__icone">⏱️</div><p>Quem tem pouco tempo, mas quer avançar de verdade</p></div>
     </div>
   </div>
 </section>
@@ -951,103 +956,103 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ====== BÔNUS ====== -->
 <section class="bonos" id="bonos">
   <div class="container">
-    <h2 class="secao__titulo">Además, el Plan Completo incluye 6 bonos exclusivos</h2>
-    <p class="bonos__intro">Por tiempo limitado, el Plan Completo incluye estos 6 recursos adicionales, totalmente gratis.</p>
+    <h2 class="secao__titulo">Além disso, o Plano Completo inclui 6 bônus exclusivos</h2>
+    <p class="bonos__intro">Por tempo limitado, o Plano Completo inclui estes 6 recursos adicionais, totalmente grátis.</p>
     <ul class="bonos__lista">
       <li class="bonos__item bonos__item--destaque">
         <div class="bonos__destaque-img">
-          <img class="bonos__thumb" src="img/bonus-01-mandamientos.webp" alt="Mockup del bono Los 10 Mandamientos Explicados" width="170" height="255" loading="lazy">
+          <img class="bonos__thumb" src="img/bonus-01-mandamientos.webp" alt="Mockup do bônus Os 10 Mandamentos Explicados" width="170" height="255" loading="lazy">
           <span class="bonos__numero">01</span>
         </div>
         <div class="bonos__conteudo-texto">
-          <h3>Los 10 Mandamientos Explicados</h3>
-          <p>Guía visual de cada mandamiento y su aplicación práctica hoy.</p>
-          <div class="bonos__valor"><s>$17</s><strong>GRATIS</strong></div>
+          <h3>Os 10 Mandamentos Explicados</h3>
+          <p>Guia visual de cada mandamento e sua aplicação prática hoje.</p>
+          <div class="bonos__valor"><s>R$47</s><strong>GRÁTIS</strong></div>
         </div>
       </li>
       <li class="bonos__item bonos__item--destaque">
         <div class="bonos__destaque-img">
-          <img class="bonos__thumb" src="img/bonus-02-milagros.webp" alt="Mockup del bono Milagros de Jesús Visualizados" width="170" height="255" loading="lazy">
+          <img class="bonos__thumb" src="img/bonus-02-milagros.webp" alt="Mockup do bônus Milagres de Jesus Visualizados" width="170" height="255" loading="lazy">
           <span class="bonos__numero">02</span>
         </div>
         <div class="bonos__conteudo-texto">
-          <h3>Milagros de Jesús Visualizados</h3>
-          <p>Los milagros más importantes explicados de forma clara y visual.</p>
-          <div class="bonos__valor"><s>$15</s><strong>GRATIS</strong></div>
+          <h3>Milagres de Jesus Visualizados</h3>
+          <p>Os milagres mais importantes explicados de forma clara e visual.</p>
+          <div class="bonos__valor"><s>R$37</s><strong>GRÁTIS</strong></div>
         </div>
       </li>
       <li class="bonos__item bonos__item--destaque">
         <div class="bonos__destaque-img">
-          <img class="bonos__thumb" src="img/bonus-04-devocionales.webp" alt="Mockup del bono Devocionales de Poder: Refuerzo Diario" width="170" height="255" loading="lazy">
+          <img class="bonos__thumb" src="img/bonus-04-devocionales.webp" alt="Mockup do bônus Devocionais de Poder: Reforço Diário" width="170" height="255" loading="lazy">
           <span class="bonos__numero">03</span>
         </div>
         <div class="bonos__conteudo-texto">
-          <h3>Devocionales de Poder: Refuerzo Diario</h3>
-          <p>Un devocional diario adicional para fortalecer tu caminar espiritual.</p>
-          <div class="bonos__valor"><s>$19</s><strong>GRATIS</strong></div>
+          <h3>Devocionais de Poder: Reforço Diário</h3>
+          <p>Um devocional diário adicional para fortalecer sua caminhada espiritual.</p>
+          <div class="bonos__valor"><s>R$47</s><strong>GRÁTIS</strong></div>
         </div>
       </li>
       <li class="bonos__item bonos__item--destaque">
         <div class="bonos__destaque-img">
-          <img class="bonos__thumb" src="img/bonus-03-historias.webp" alt="Mockup del bono Historias Bíblicas para la Familia" width="170" height="255" loading="lazy">
+          <img class="bonos__thumb" src="img/bonus-03-historias.webp" alt="Mockup do bônus Histórias Bíblicas para a Família" width="170" height="255" loading="lazy">
           <span class="bonos__numero">04</span>
         </div>
         <div class="bonos__conteudo-texto">
-          <h3>Historias Bíblicas para la Familia</h3>
-          <p>Material ilustrado para compartir la Palabra con los más pequeños.</p>
-          <div class="bonos__valor"><s>$12</s><strong>GRATIS</strong></div>
+          <h3>Histórias Bíblicas para a Família</h3>
+          <p>Material ilustrado para compartilhar a Palavra com os pequenos.</p>
+          <div class="bonos__valor"><s>R$27</s><strong>GRÁTIS</strong></div>
         </div>
       </li>
       <li class="bonos__item bonos__item--destaque">
         <div class="bonos__destaque-img">
-          <img class="bonos__thumb" src="img/bonus-05-manual.webp" alt="Mockup del bono Manual de Interpretación Bíblica" width="170" height="255" loading="lazy">
+          <img class="bonos__thumb" src="img/bonus-05-manual.webp" alt="Mockup do bônus Manual de Interpretação Bíblica" width="170" height="255" loading="lazy">
           <span class="bonos__numero">05</span>
         </div>
         <div class="bonos__conteudo-texto">
-          <h3>Manual de Interpretación Bíblica</h3>
-          <p>Principios simples para interpretar cualquier pasaje por tu cuenta.</p>
-          <div class="bonos__valor"><s>$14</s><strong>GRATIS</strong></div>
+          <h3>Manual de Interpretação Bíblica</h3>
+          <p>Princípios simples para interpretar qualquer passagem por conta própria.</p>
+          <div class="bonos__valor"><s>R$37</s><strong>GRÁTIS</strong></div>
         </div>
       </li>
       <li class="bonos__item bonos__item--destaque">
         <div class="bonos__destaque-img">
-          <img class="bonos__thumb" src="img/bonus-06-plan-lectura.webp" alt="Mockup del bono Plan de Lectura Bíblica en 90 Días" width="170" height="255" loading="lazy">
+          <img class="bonos__thumb" src="img/bonus-06-plan-lectura.webp" alt="Mockup do bônus Plano de Leitura Bíblica em 90 Dias" width="170" height="255" loading="lazy">
           <span class="bonos__numero">06</span>
         </div>
         <div class="bonos__conteudo-texto">
-          <h3>Plan de Lectura Bíblica en 90 Días</h3>
-          <p>Calendario diario guiado para leer la Biblia completa en solo 90 días.</p>
-          <div class="bonos__valor"><s>$16</s><strong>GRATIS</strong></div>
+          <h3>Plano de Leitura Bíblica em 90 Dias</h3>
+          <p>Calendário diário guiado para ler a Bíblia completa em apenas 90 dias.</p>
+          <div class="bonos__valor"><s>R$37</s><strong>GRÁTIS</strong></div>
         </div>
       </li>
     </ul>
-    <div class="bonos__total"><s>Valor total de los bonos: <strong>$93</strong></s>, incluidos hoy sin costo</div>
+    <div class="bonos__total"><s>Valor total dos bônus: <strong>R$232</strong></s>, incluídos hoje sem custo</div>
   </div>
 </section>
 
 <!-- ====== DEPOIMENTOS (rolagem infinita em mobile e desktop) ====== -->
 <section class="depoimentos">
   <div class="container">
-    <h2 class="secao__titulo">Lo que dicen quienes ya lo están usando</h2>
+    <h2 class="secao__titulo">O que dizem aqueles que já estão usando</h2><p class="depoimentos__nota" style="text-align: center; font-size: 14px; opacity: 0.75; margin: -8px auto 20px; max-width: 560px; padding: 0px 16px;">Mensagens originais de alunos de língua espanhola, com a tradução para o português logo abaixo.</p>
   </div>
 
   <!-- Fora do .container para ocupar quase toda a largura da tela -->
   <div class="depoimentos-marquee">
     <div class="depoimentos-marquee__track">
-      <div class="depoimento__print"><img src="img/depoimento-01-andrea.webp" alt="Testimonio de WhatsApp de Andrea sobre Código Divino" loading="lazy"></div>
-      <div class="depoimento__print"><img src="img/depoimento-02-carlos.webp" alt="Testimonio de WhatsApp del Pastor Carlos sobre Código Divino" loading="lazy"></div>
-      <div class="depoimento__print"><img src="img/depoimento-03-miguel.webp" alt="Testimonio de WhatsApp de Miguel Alvares sobre Código Divino" loading="lazy"></div>
-      <div class="depoimento__print"><img src="img/depoimento-04-jose.webp" alt="Testimonio de WhatsApp de José Ricardo sobre Código Divino" loading="lazy"></div>
-      <div class="depoimento__print"><img src="img/depoimento-05-laura.webp" alt="Testimonio de WhatsApp de Laura Ramirez sobre Código Divino" loading="lazy"></div>
-      <div class="depoimento__print"><img src="img/depoimento-06-samuel.webp" alt="Testimonio de WhatsApp de Samuel García sobre Código Divino" loading="lazy"></div>
-      <div class="depoimento__print"><img src="img/depoimento-07-maria.webp" alt="Testimonio de WhatsApp de María sobre Código Divino" loading="lazy"></div>
-      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-01-andrea.webp" alt="" loading="lazy"></div>
-      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-02-carlos.webp" alt="" loading="lazy"></div>
-      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-03-miguel.webp" alt="" loading="lazy"></div>
-      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-04-jose.webp" alt="" loading="lazy"></div>
-      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-05-laura.webp" alt="" loading="lazy"></div>
-      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-06-samuel.webp" alt="" loading="lazy"></div>
-      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-07-maria.webp" alt="" loading="lazy"></div>
+      <div class="depoimento__print"><img src="img/depoimento-01-andrea.webp" alt="Depoimento de WhatsApp de Andrea sobre o Código Divino" loading="lazy"><div class="depoimento__traducao"><span class="depoimento__traducao-label">🌎 Tradução do espanhol</span><p>"Oii 😊 Obrigada por me passar o link do Código Divino. Estou começando agora na fé e tinha partes da Bíblia que eu simplesmente não entendia. Agora tudo faz muito mais sentido. Agora até me dá vontade de continuar lendo todos os dias 💗🙏"</p></div></div>
+      <div class="depoimento__print"><img src="img/depoimento-02-carlos.webp" alt="Depoimento de WhatsApp do Pastor Carlos sobre o Código Divino" loading="lazy"><div class="depoimento__traducao"><span class="depoimento__traducao-label">🌎 Tradução do espanhol</span><p>"Irmão, preciso te dizer uma coisa. Comprei o The Divine Code há uma semana... Para minha satisfação, ele esclareceu muitas coisas que eu vinha lendo há anos sem chegar a compreender totalmente. Agora, preparar sermões ficou muito mais fácil. É realmente excelente. Agradeço muito por disponibilizar um conteúdo tão valioso. 🙏"</p></div></div>
+      <div class="depoimento__print"><img src="img/depoimento-03-miguel.webp" alt="Depoimento de WhatsApp de Miguel Alvares sobre o Código Divino" loading="lazy"><div class="depoimento__traducao"><span class="depoimento__traducao-label">🌎 Tradução do espanhol</span><p>"Irmão 🙌 Só queria te dizer que esse material é muito bom. Estou usando para preparar as reuniões da célula. Antes me faziam perguntas e eu ficava pensando no que responder 😅 Agora chego muito mais preparado. Dá pra notar a diferença de verdade."</p></div></div>
+      <div class="depoimento__print"><img src="img/depoimento-04-jose.webp" alt="Depoimento de WhatsApp de José Ricardo sobre o Código Divino" loading="lazy"><div class="depoimento__traducao"><span class="depoimento__traducao-label">🌎 Tradução do espanhol</span><p>"Amigo, obrigado de verdade. Comecei com o Código Divino por curiosidade... E agora até fazemos o estudo bíblico em família. Meus filhos perguntam um monte de coisas e finalmente sinto que consigo explicar bem. Não esperava que nos ajudasse tanto."</p></div></div>
+      <div class="depoimento__print"><img src="img/depoimento-05-laura.webp" alt="Depoimento de WhatsApp de Laura Ramirez sobre o Código Divino" loading="lazy"><div class="depoimento__traducao"><span class="depoimento__traducao-label">🌎 Tradução do espanhol</span><p>"Vou ser sincera... Leio a Bíblia há anos. Mas muitas vezes terminava um capítulo e pensava: "o que isso quis dizer?" 😅 Com o Código Divino comecei a entender o contexto e tudo se conecta muito melhor. Agora aproveito muito mais o tempo que passo lendo a Palavra. 🙏"</p></div></div>
+      <div class="depoimento__print"><img src="img/depoimento-06-samuel.webp" alt="Depoimento de WhatsApp de Samuel García sobre o Código Divino" loading="lazy"><div class="depoimento__traducao"><span class="depoimento__traducao-label">🌎 Tradução do espanhol</span><p>"Irmão, eu tinha que te escrever 😅 Comecei a ver o Código Divino e de verdade me surpreendeu. Tem coisas da Bíblia que eu já tinha ouvido muitas vezes, mas nunca tinha entendido assim. Está me ajudando muitíssimo a ensinar melhor na igreja. Obrigado por compartilhar algo assim 🙏"</p></div></div>
+      <div class="depoimento__print"><img src="img/depoimento-07-maria.webp" alt="Depoimento de WhatsApp de María sobre o Código Divino" loading="lazy"><div class="depoimento__traducao"><span class="depoimento__traducao-label">🌎 Tradução do espanhol</span><p>"Oi 😊 Vou te contar uma coisa... Sempre quis ler mais a Bíblia, mas muitas vezes ficava entediada porque não entendia o contexto. Comecei com o Código Divino e mudou totalmente minha forma de estudar. Agora entendo melhor o que estou lendo e até me emociona continuar aprendendo 💗"</p></div></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-01-andrea.webp" alt="" loading="lazy"><div class="depoimento__traducao"><span class="depoimento__traducao-label">🌎 Tradução do espanhol</span><p>"Oii 😊 Obrigada por me passar o link do Código Divino. Estou começando agora na fé e tinha partes da Bíblia que eu simplesmente não entendia. Agora tudo faz muito mais sentido. Agora até me dá vontade de continuar lendo todos os dias 💗🙏"</p></div></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-02-carlos.webp" alt="" loading="lazy"><div class="depoimento__traducao"><span class="depoimento__traducao-label">🌎 Tradução do espanhol</span><p>"Irmão, preciso te dizer uma coisa. Comprei o The Divine Code há uma semana... Para minha satisfação, ele esclareceu muitas coisas que eu vinha lendo há anos sem chegar a compreender totalmente. Agora, preparar sermões ficou muito mais fácil. É realmente excelente. Agradeço muito por disponibilizar um conteúdo tão valioso. 🙏"</p></div></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-03-miguel.webp" alt="" loading="lazy"><div class="depoimento__traducao"><span class="depoimento__traducao-label">🌎 Tradução do espanhol</span><p>"Irmão 🙌 Só queria te dizer que esse material é muito bom. Estou usando para preparar as reuniões da célula. Antes me faziam perguntas e eu ficava pensando no que responder 😅 Agora chego muito mais preparado. Dá pra notar a diferença de verdade."</p></div></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-04-jose.webp" alt="" loading="lazy"><div class="depoimento__traducao"><span class="depoimento__traducao-label">🌎 Tradução do espanhol</span><p>"Amigo, obrigado de verdade. Comecei com o Código Divino por curiosidade... E agora até fazemos o estudo bíblico em família. Meus filhos perguntam um monte de coisas e finalmente sinto que consigo explicar bem. Não esperava que nos ajudasse tanto."</p></div></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-05-laura.webp" alt="" loading="lazy"><div class="depoimento__traducao"><span class="depoimento__traducao-label">🌎 Tradução do espanhol</span><p>"Vou ser sincera... Leio a Bíblia há anos. Mas muitas vezes terminava um capítulo e pensava: "o que isso quis dizer?" 😅 Com o Código Divino comecei a entender o contexto e tudo se conecta muito melhor. Agora aproveito muito mais o tempo que passo lendo a Palavra. 🙏"</p></div></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-06-samuel.webp" alt="" loading="lazy"><div class="depoimento__traducao"><span class="depoimento__traducao-label">🌎 Tradução do espanhol</span><p>"Irmão, eu tinha que te escrever 😅 Comecei a ver o Código Divino e de verdade me surpreendeu. Tem coisas da Bíblia que eu já tinha ouvido muitas vezes, mas nunca tinha entendido assim. Está me ajudando muitíssimo a ensinar melhor na igreja. Obrigado por compartilhar algo assim 🙏"</p></div></div>
+      <div class="depoimento__print" aria-hidden="true"><img src="img/depoimento-07-maria.webp" alt="" loading="lazy"><div class="depoimento__traducao"><span class="depoimento__traducao-label">🌎 Tradução do espanhol</span><p>"Oi 😊 Vou te contar uma coisa... Sempre quis ler mais a Bíblia, mas muitas vezes ficava entediada porque não entendia o contexto. Comecei com o Código Divino e mudou totalmente minha forma de estudar. Agora entendo melhor o que estou lendo e até me emociona continuar aprendendo 💗"</p></div></div>
     </div>
   </div>
 </section>
@@ -1058,9 +1063,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container autoridade__inner">
     <div class="autoridade__selo">✝️</div>
     <div>
-      <p class="autoridade__nome">Sobre Código Divino</p>
+      <p class="autoridade__nome">Sobre o Código Divino</p>
       <p class="autoridade__bio">
-        Código Divino nació de la necesidad de miles de cristianos que amaban la Palabra pero se sentían perdidos al estudiarla por su cuenta. Hoy ayudamos a creyentes en toda Latinoamérica a construir un hábito de estudio bíblico claro, visual y sostenible, sin necesidad de seminario ni años de experiencia.
+        O Código Divino nasceu da necessidade de milhares de cristãos que amavam a Palavra, mas se sentiam perdidos ao estudá-la por conta própria. Hoje ajudamos cristãos em toda a América Latina a construir um hábito de estudo bíblico claro, visual e sustentável, sem precisar de seminário nem de anos de experiência.
       </p>
     </div>
   </div>
@@ -1068,80 +1073,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ====== OFERTA / PREÇO — DOIS PLANOS ====== -->
 <section class="oferta" id="oferta">
-  <h2 class="secao__titulo">Elige tu plan y empieza hoy</h2>
-  <p class="secao__subtitulo">Dos formas de acceder al Método V.E.R. Elige la que mejor se ajuste a ti.</p>
+  <h2 class="secao__titulo">Escolha seu plano e comece hoje</h2>
+  <p class="secao__subtitulo">Duas formas de acessar o Método V.E.R. Escolha a que melhor se encaixa para você.</p>
 
   <div>
-    <p class="oferta__contador-label">Esta oferta termina hoy a medianoche</p>
-    <div class="oferta__contador" id="contador-oferta">--:--:--</div>
+    <p class="oferta__contador-label">Esta oferta termina em</p>
+    <div class="oferta__contador" id="contador-oferta">15:00</div>
   </div>
 
   <div class="planos__grid">
     <!-- PLAN BÁSICO: solo el produto principal, sem bônus -->
     <div class="plano__card">
-      <p class="plano__nombre">📘 Plan Básico</p>
-      <p class="plano__desc">Solo el Método V.E.R. completo</p>
-      <p class="plano__valor-total"><s>Valor: $67</s></p>
-      <p class="plano__preco"><small>$</small>9,90</p>
-      <p class="plano__parcelas">Pago único · en tu moneda local</p>
+      <p class="plano__nombre">📘 Plano Básico</p>
+      <p class="plano__desc">Apenas o Método V.E.R. completo</p>
+      <p class="plano__valor-total"><s>Valor: R$97</s></p>
+      <p class="plano__preco"><small>R$</small>9,90</p>
+      <p class="plano__parcelas">Pagamento único · em reais</p>
       <ul class="plano__lista">
-        <li><span class="check">✓</span> Génesis Verso a Verso</li>
-        <li><span class="check">✓</span> Éxodo Explicado</li>
-        <li><span class="check">✓</span> Levítico Sin Complicaciones</li>
-        <li><span class="check">✓</span> Josué en Resúmenes Temáticos</li>
-        <li><span class="check">✓</span> Devocional Guiado de 30 Días</li>
-        <li class="nao-incluido"><span class="check">✕</span> <s>Los 10 Mandamientos Explicados</s></li>
-        <li class="nao-incluido"><span class="check">✕</span> <s>Milagros de Jesús Visualizados</s></li>
-        <li class="nao-incluido"><span class="check">✕</span> <s>Historias Bíblicas para la Familia</s></li>
-        <li class="nao-incluido"><span class="check">✕</span> <s>Devocionales de Poder: Refuerzo Diario</s></li>
-        <li class="nao-incluido"><span class="check">✕</span> <s>Manual de Interpretación Bíblica</s></li>
-        <li class="nao-incluido"><span class="check">✕</span> <s>Plan de Lectura Bíblica en 90 Días</s></li>
+        <li><span class="check">✓</span> Gênesis Versículo por Versículo</li>
+        <li><span class="check">✓</span> Êxodo Explicado</li>
+        <li><span class="check">✓</span> Levítico Sem Complicações</li>
+        <li><span class="check">✓</span> Josué em Resumos Temáticos</li>
+        <li><span class="check">✓</span> Devocional Guiado de 30 Dias</li>
+        <li class="nao-incluido"><span class="check">✕</span> <s>Os 10 Mandamentos Explicados</s></li>
+        <li class="nao-incluido"><span class="check">✕</span> <s>Milagres de Jesus Visualizados</s></li>
+        <li class="nao-incluido"><span class="check">✕</span> <s>Histórias Bíblicas para a Família</s></li>
+        <li class="nao-incluido"><span class="check">✕</span> <s>Devocionais de Poder: Reforço Diário</s></li>
+        <li class="nao-incluido"><span class="check">✕</span> <s>Manual de Interpretação Bíblica</s></li>
+        <li class="nao-incluido"><span class="check">✕</span> <s>Plano de Leitura Bíblica em 90 Dias</s></li>
       </ul>
-      <a href="#" id="btn-comprar-basico" class="btn-cta btn-cta--outline">QUIERO EL PLAN BÁSICO</a>
+      <a href="#" id="btn-comprar-basico" class="btn-cta btn-cta--outline">QUERO O PLANO BÁSICO</a>
     </div>
 
     <!-- PLAN COMPLETO: produto principal + 6 bônus -->
     <div class="plano__card plano__card--completo">
-      <span class="plano__ribbon">⭐ Más elegido</span>
-      <p class="plano__nombre">🎁 Plan Completo</p>
-      <p class="plano__desc">Método V.E.R. + 6 bonos exclusivos</p>
-      <p class="plano__valor-total"><s>Valor total: $160</s></p>
-      <p class="plano__preco"><small>$</small>14,90</p>
-      <p class="plano__parcelas">Pago único · en tu moneda local</p>
+      <span class="plano__ribbon">⭐ Mais escolhido</span>
+      <p class="plano__nombre">🎁 Plano Completo</p>
+      <p class="plano__desc">Método V.E.R. + 6 bônus exclusivos</p>
+      <p class="plano__valor-total"><s>Valor total: R$329</s></p>
+      <p class="plano__preco"><small>R$</small>27,90</p>
+      <p class="plano__parcelas">Pagamento único · em reais</p>
       <ul class="plano__lista">
-        <li><span class="check">✓</span> Génesis Verso a Verso</li>
-        <li><span class="check">✓</span> Éxodo Explicado</li>
-        <li><span class="check">✓</span> Levítico Sin Complicaciones</li>
-        <li><span class="check">✓</span> Josué en Resúmenes Temáticos</li>
-        <li><span class="check">✓</span> Devocional Guiado de 30 Días</li>
-        <li><span class="check">🎁</span> Los 10 Mandamientos Explicados</li>
-        <li><span class="check">🎁</span> Milagros de Jesús Visualizados</li>
-        <li><span class="check">🎁</span> Historias Bíblicas para la Familia</li>
-        <li><span class="check">🎁</span> Devocionales de Poder: Refuerzo Diario</li>
-        <li><span class="check">🎁</span> Manual de Interpretación Bíblica</li>
-        <li><span class="check">🎁</span> Plan de Lectura Bíblica en 90 Días</li>
+        <li><span class="check">✓</span> Gênesis Versículo por Versículo</li>
+        <li><span class="check">✓</span> Êxodo Explicado</li>
+        <li><span class="check">✓</span> Levítico Sem Complicações</li>
+        <li><span class="check">✓</span> Josué em Resumos Temáticos</li>
+        <li><span class="check">✓</span> Devocional Guiado de 30 Dias</li>
+        <li><span class="check">🎁</span> Os 10 Mandamentos Explicados</li>
+        <li><span class="check">🎁</span> Milagres de Jesus Visualizados</li>
+        <li><span class="check">🎁</span> Histórias Bíblicas para a Família</li>
+        <li><span class="check">🎁</span> Devocionais de Poder: Reforço Diário</li>
+        <li><span class="check">🎁</span> Manual de Interpretação Bíblica</li>
+        <li><span class="check">🎁</span> Plano de Leitura Bíblica em 90 Dias</li>
       </ul>
-      <a href="#" id="btn-comprar-completo" class="btn-cta btn-cta--pulsante">🔓 QUIERO EL PLAN COMPLETO</a>
+      <a href="#" id="btn-comprar-completo" class="btn-cta btn-cta--pulsante">🔓 QUERO O PLANO COMPLETO</a>
     </div>
   </div>
 
-  <p class="form-microcopy claro" style="text-align:center; margin-top:22px;">🔒 Pago 100% seguro · Acceso inmediato por correo electrónico</p>
+  <p class="form-microcopy claro" style="text-align:center; margin-top:22px;">🔒 Pagamento 100% seguro · Acesso imediato por e-mail</p>
 
   <div class="oferta__pagamentos">
-    <span>💳 Tarjeta</span>
-    <span>🏦 Transferencia</span>
-    <span>📱 Billeteras digitales</span>
+    <span>💳 Cartão</span>
+    <span>🏦 Transferência</span>
+    <span>📱 Carteiras digitais</span>
   </div>
-  <p class="oferta__garantia-mini">🛡️ Garantía incondicional de 30 días en ambos planes</p>
+  <p class="oferta__garantia-mini">🛡️ Garantia incondicional de 30 dias nos dois planos</p>
 </section>
 
 <!-- ====== GARANTIA ====== -->
 <section class="garantia" id="garantia">
   <div class="container">
     <div class="garantia__selo">🛡️</div>
-    <h2 class="secao__titulo">Garantía de 30 días, sin preguntas</h2>
+    <h2 class="secao__titulo">Garantia de 30 dias, sem perguntas</h2>
     <p class="garantia__texto">
-      Si dentro de los próximos <strong>30 días</strong> sientes que Código Divino no es para ti, te devolvemos el <strong>100% de tu inversión</strong>. Sin condiciones, sin preguntas incómodas. El riesgo es todo nuestro.
+      Se nos próximos <strong>30 dias</strong> você sentir que o Código Divino não é para você, devolvemos <strong>100% do seu investimento</strong>. Sem condições, sem perguntas constrangedoras. O risco é todo nosso.
     </p>
   </div>
 </section>
@@ -1149,35 +1154,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ====== FAQ ====== -->
 <section class="faq" id="faq">
   <div class="container">
-    <h2 class="secao__titulo">Preguntas frecuentes</h2>
+    <h2 class="secao__titulo">Perguntas frequentes</h2>
     <div class="faq__lista">
       <div class="faq__item">
-        <button class="faq__pergunta" onclick="toggleFaq(this)">¿Cómo recibo el material? <span class="icone">+</span></button>
-        <div class="faq__resposta"><p>Acceso inmediato por correo electrónico apenas se confirme el pago. Podrás verlo en tu celular, tablet o computadora.</p></div>
+        <button class="faq__pergunta" onclick="toggleFaq(this)">Como recebo o material? <span class="icone">+</span></button>
+        <div class="faq__resposta"><p>Acesso imediato por e-mail assim que o pagamento for confirmado. Você poderá acessar pelo celular, tablet ou computador.</p></div>
       </div>
       <div class="faq__item">
-        <button class="faq__pergunta" onclick="toggleFaq(this)">¿Cuál es la diferencia entre el Plan Básico y el Plan Completo? <span class="icone">+</span></button>
-        <div class="faq__resposta"><p>El Plan Básico incluye el Método V.E.R. completo (Génesis, Éxodo, Levítico, Josué y el devocional de 30 días). El Plan Completo incluye todo eso más los 6 bonos exclusivos, por una diferencia de solo $5.</p></div>
+        <button class="faq__pergunta" onclick="toggleFaq(this)">Qual é a diferença entre o Plano Básico e o Plano Completo? <span class="icone">+</span></button>
+        <div class="faq__resposta"><p>O Plano Básico inclui o Método V.E.R. completo (Gênesis, Êxodo, Levítico, Josué e o devocional de 30 dias). O Plano Completo inclui tudo isso e mais os 6 bônus exclusivos, por uma diferença de apenas R$18.</p></div>
       </div>
       <div class="faq__item">
-        <button class="faq__pergunta" onclick="toggleFaq(this)">¿Necesito experiencia previa estudiando la Biblia? <span class="icone">+</span></button>
-        <div class="faq__resposta"><p>No. El Método V.E.R. está diseñado para empezar desde cero, sin conocimientos teológicos previos.</p></div>
+        <button class="faq__pergunta" onclick="toggleFaq(this)">Preciso ter experiência prévia estudando a Bíblia? <span class="icone">+</span></button>
+        <div class="faq__resposta"><p>Não. O Método V.E.R. foi criado para começar do zero, sem conhecimentos teológicos prévios.</p></div>
       </div>
       <div class="faq__item">
-        <button class="faq__pergunta" onclick="toggleFaq(this)">¿Es una suscripción que se renueva? <span class="icone">+</span></button>
-        <div class="faq__resposta"><p>No. Es un pago único con acceso de por vida al material y a las actualizaciones futuras.</p></div>
+        <button class="faq__pergunta" onclick="toggleFaq(this)">É uma assinatura que se renova? <span class="icone">+</span></button>
+        <div class="faq__resposta"><p>Não. É um pagamento único, com acesso vitalício ao material e às atualizações futuras.</p></div>
       </div>
       <div class="faq__item">
-        <button class="faq__pergunta" onclick="toggleFaq(this)">¿Funciona en cualquier dispositivo? <span class="icone">+</span></button>
-        <div class="faq__resposta"><p>Sí. El material es 100% digital y compatible con celular, tablet o computadora, disponible para leer en pantalla o imprimir.</p></div>
+        <button class="faq__pergunta" onclick="toggleFaq(this)">Funciona em qualquer dispositivo? <span class="icone">+</span></button>
+        <div class="faq__resposta"><p>Sim. O material é 100% digital e compatível com celular, tablet ou computador, disponível para ler na tela ou imprimir.</p></div>
       </div>
       <div class="faq__item">
-        <button class="faq__pergunta" onclick="toggleFaq(this)">¿Qué pasa si no me gusta? <span class="icone">+</span></button>
-        <div class="faq__resposta"><p>Tienes 30 días de garantía incondicional. Si no te sirve, te devolvemos el 100% de tu dinero, sin preguntas.</p></div>
+        <button class="faq__pergunta" onclick="toggleFaq(this)">E se eu não gostar? <span class="icone">+</span></button>
+        <div class="faq__resposta"><p>Você tem 30 dias de garantia incondicional. Se não servir para você, devolvemos 100% do seu dinheiro, sem perguntas.</p></div>
       </div>
       <div class="faq__item">
-        <button class="faq__pergunta" onclick="toggleFaq(this)">¿En qué moneda se cobra? <span class="icone">+</span></button>
-        <div class="faq__resposta"><p>El pago se procesa en tu moneda local a través de una pasarela segura, con el equivalente al precio mostrado en dólares.</p></div>
+        <button class="faq__pergunta" onclick="toggleFaq(this)">Em qual moeda é cobrado? <span class="icone">+</span></button>
+        <div class="faq__resposta"><p>O pagamento é processado em reais (R$) por meio de um gateway seguro, exatamente no valor mostrado na página.</p></div>
       </div>
     </div>
   </div>
@@ -1186,17 +1191,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ====== CTA FINAL ====== -->
 <section class="cta-final">
   <div class="container">
-    <h2 class="cta-final__titulo">Tu Biblia está esperando que la entiendas de verdad</h2>
-    <p class="cta-final__sub">Elige tu plan y empieza hoy con el Método V.E.R., con garantía de 30 días.</p>
-    <a href="#oferta" class="btn-cta">✅ QUIERO EMPEZAR AHORA</a>
+    <h2 class="cta-final__titulo">Sua Bíblia está esperando que você a entenda de verdade</h2>
+    <p class="cta-final__sub">Escolha seu plano e comece hoje com o Método V.E.R., com garantia de 30 dias.</p>
+    <a href="#oferta" class="btn-cta">✅ QUERO COMEÇAR AGORA</a>
   </div>
 </section>
 
 <!-- ====== RODAPÉ ====== -->
 <footer>
-  <p>© <span id="ano-atual"></span> Código Divino. Todos los derechos reservados.</p>
-  <p><a href="/privacidad.html">Política de Privacidad</a> · <a href="/terminos.html">Términos de Uso</a></p>
-  <p class="disclaimer">Este sitio no está afiliado a Facebook/Meta ni a ninguna red social. Los resultados de estudio dependen de la constancia individual.</p>
+  <p>© <span id="ano-atual"></span> Código Divino. Todos os direitos reservados.</p>
+  <p><a href="/privacidad.html">Política de Privacidade</a> · <a href="/terminos.html">Termos de Uso</a></p>
+  <p class="disclaimer">Este site não é afiliado ao Facebook/Meta nem a nenhuma rede social. Os resultados de estudo dependem da constância individual.</p>
 </footer>
 
 <!-- ====== MODAL OFERTA DE SAÍDA (back-redirect) ======
@@ -1204,31 +1209,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="modal-salida" id="modal-salida">
   <div class="modal-salida__overlay" onclick="cerrarOfertaSalida()"></div>
   <div class="modal-salida__card">
-    <button class="modal-salida__fechar" onclick="cerrarOfertaSalida()" aria-label="Cerrar">×</button>
+    <button class="modal-salida__fechar" onclick="cerrarOfertaSalida()" aria-label="Fechar">×</button>
     <p class="modal-salida__icone">🙏</p>
-    <h2 class="modal-salida__titulo">¡Espera un momento!</h2>
-    <p class="modal-salida__texto">Antes de irte, tenemos una última oferta solo para ti: lleva el <strong>Plan Completo</strong> al mismo precio del Plan Básico. Esto es todo lo que recibes:</p>
+    <h2 class="modal-salida__titulo">Espere um momento!</h2>
+    <p class="modal-salida__texto">Antes de sair, temos uma última oferta só para você: leve o <strong>Plano Completo</strong> pelo mesmo preço do Plano Básico. Isto é tudo o que você recebe:</p>
     <ul class="modal-salida__lista">
-      <li><span class="check">✓</span> Génesis Verso a Verso</li>
-      <li><span class="check">✓</span> Éxodo Explicado</li>
-      <li><span class="check">✓</span> Levítico Sin Complicaciones</li>
-      <li><span class="check">✓</span> Josué en Resúmenes Temáticos</li>
-      <li><span class="check">✓</span> Devocional Guiado de 30 Días</li>
-      <li><span class="check">🎁</span> Los 10 Mandamientos Explicados</li>
-      <li><span class="check">🎁</span> Milagros de Jesús Visualizados</li>
-      <li><span class="check">🎁</span> Historias Bíblicas para la Familia</li>
-      <li><span class="check">🎁</span> Devocionales de Poder: Refuerzo Diario</li>
-      <li><span class="check">🎁</span> Manual de Interpretación Bíblica</li>
-      <li><span class="check">🎁</span> Plan de Lectura Bíblica en 90 Días</li>
+      <li><span class="check">✓</span> Gênesis Versículo por Versículo</li>
+      <li><span class="check">✓</span> Êxodo Explicado</li>
+      <li><span class="check">✓</span> Levítico Sem Complicações</li>
+      <li><span class="check">✓</span> Josué em Resumos Temáticos</li>
+      <li><span class="check">✓</span> Devocional Guiado de 30 Dias</li>
+      <li><span class="check">🎁</span> Os 10 Mandamentos Explicados</li>
+      <li><span class="check">🎁</span> Milagres de Jesus Visualizados</li>
+      <li><span class="check">🎁</span> Histórias Bíblicas para a Família</li>
+      <li><span class="check">🎁</span> Devocionais de Poder: Reforço Diário</li>
+      <li><span class="check">🎁</span> Manual de Interpretação Bíblica</li>
+      <li><span class="check">🎁</span> Plano de Leitura Bíblica em 90 Dias</li>
     </ul>
     <div class="modal-salida__precos">
-      <span class="modal-salida__precoAntes">$14,90</span>
-      <span class="modal-salida__precoAgora">$9,90</span>
+      <span class="modal-salida__precoAntes">R$27,90</span>
+      <span class="modal-salida__precoAgora">R$9,90</span>
     </div>
-    <p class="modal-salida__contador-label">Esta oferta especial expira en</p>
+    <p class="modal-salida__contador-label">Esta oferta especial expira em</p>
     <div class="modal-salida__contador" id="contador-salida">10:00</div>
-    <a href="#" id="btn-oferta-salida" class="btn-cta">🔓 QUIERO ESTA OFERTA ÚNICA</a>
-    <button class="modal-salida__recusar" onclick="cerrarOfertaSalida()">No, prefiero pagar más después</button>
+    <a href="#" id="btn-oferta-salida" class="btn-cta">🔓 QUERO ESTA OFERTA ÚNICA</a>
+    <button class="modal-salida__recusar" onclick="cerrarOfertaSalida()">Não, prefiro pagar mais depois</button>
   </div>
 </div>
 
@@ -1245,8 +1250,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     linkCheckoutOfertaSalida: '',
     // Valores numéricos usados nos eventos de rastreamento
     valorBasico: 9.90,
-    valorCompleto: 14.90,
-    moeda: 'USD'
+    valorCompleto: 27.90,
+    moeda: 'BRL'
   };
 
   document.getElementById('btn-comprar-basico').href = CONFIG.linkCheckoutBasico;
@@ -1273,18 +1278,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const el = document.getElementById(elementoId);
     if (!el) return;
     const agora = new Date();
-    const fim = new Date(agora.getFullYear(), agora.getMonth(), agora.getDate(), 23, 59, 59, 999).getTime();
+    const fim = agora.getTime() + 15 * 60 * 1000; // contador de 15 minutos
 
     function atualizar() {
       const dist = fim - new Date().getTime();
       if (dist < 0) {
-        el.innerHTML = 'Oferta finalizada';
+        el.innerHTML = 'Oferta encerrada';
         return;
       }
       const h = Math.floor(dist / (1000 * 60 * 60));
       const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
       const s = Math.floor((dist % (1000 * 60)) / 1000);
-      el.innerHTML = String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+      el.innerHTML = String(h * 60 + m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
     }
     atualizar();
     setInterval(atualizar, 1000);
@@ -1335,7 +1340,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     document.getElementById('notif-nombre').textContent = nombre;
     document.getElementById('notif-ciudad').textContent = ciudad;
-    document.getElementById('notif-tiempo').textContent = 'hace ' + minutos + ' minuto' + (minutos > 1 ? 's' : '');
+    document.getElementById('notif-tiempo').textContent = 'há ' + minutos + ' minuto' + (minutos > 1 ? 's' : '');
 
     const barra = document.querySelector('.barra-urgencia');
     el.style.top = ((barra ? barra.offsetHeight : 40) + 10) + 'px';
@@ -1501,5 +1506,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   })();
 </script>
 
-</body>
-</html>
+
+
+</body></html>
